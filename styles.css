@@ -489,6 +489,30 @@ nav a{
     border-radius: 8px;
 }
 
+.trust2e {
+    margin-top: 20px;
+    background-color: #8e00d0;
+}
+
+.trust2e{
+    margin-top: 14px;
+    border-radius: 8px;
+    padding: 20px 12px;
+}
+
+.trust2e h3{
+    font-size: 30px;
+    color: #fff;
+}
+
+.trust2e p{
+    margin-top: 24px;
+    font-size: 20px;
+    line-height: 35px;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
 
 .active3{
     color: #fff;
@@ -560,6 +584,30 @@ nav a{
 }
 
 .startup3 p{
+    color: #fff;
+    font-size: 16px;
+    padding-left: 8px;
+}
+
+.startup4{
+    background-color: #a100eb;
+    border-radius: 4px;
+    width: 100px;
+}
+
+.startup4 p{
+    color: #fff;
+    font-size: 16px;
+    padding-left: 8px;
+}
+
+.startup5{
+    background-color: #1787ff;
+    border-radius: 4px;
+    width: 130px;
+}
+
+.startup5 p{
     color: #fff;
     font-size: 16px;
     padding-left: 8px;
