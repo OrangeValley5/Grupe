@@ -1,81 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YR1205HWYG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YR1205HWYG');
+</script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="shortcut icon" type="images/png" href="images/logo.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <title>mutualbenefits</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!-- Animation -->
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Easepay</title>
+    <script src="./Mail.js"></script>
+    <script src="script.js" defer></script>
+
+    <script>
+        const name = localStorage.getItem('user_name');
+
+    if (name) {
+      const helloElement = document.getElementById('fName'); // Assuming 'heading' is the ID of the 'Hello' element.
+      helloElement.textContent = name;
+    }
+    
+      </script>
+  
+   
+
+
+
     
 </head>
-<body>
-    <nav>
-        <a href="index.html"><h4 class="logo">MUTUAL <span>BENEFITS</span></h4></a>
+<body >
 
-        <ul>
-            <li><a href="subscribe.html" class="active">Sign In </a></li>
-        </ul>
-    </nav>
-    <div class="main-container">
-        <div class="sub-container" data-aos="fade-up">
-            <div class="sub-col1">
-                <div class="alert">Incorrect Card Details !</div>
-                <h3>Subsription</h3>
-                <form id='checkoutForm' class='checkoutForm'>
-                    <div>
-                        <p>Email address</p>
-                        <input id='email' class="input" type="email" placeholder="Enter your email address"/>
-                    </div>
-    
-                    <div>
-                        <p>Credit Card Number</p>
-                        <input id='ccNumber' class="input" type="number" placeholder="XXXX XXXX XXXX XXXX"/>
-                    </div>
-                    <p>Expiry Date</p>
-                    <div class="inputs">
-                    <div>
-                        
-                        <input id='exMonth' class="input" type="number" placeholder="MM"/>
-                    </div>
-                    <div>
-                        <input id='exYear' class="input" type="number" placeholder="YY"/>
-                    </div>
-                    </div>
-                    <div>
-                        <p>Cvv</p>
-                        <input id='bbb' class="input" type="number" placeholder="XXX"/>
-                    </div>
-                    <div>
-                    <label class="cus"><input type="checkbox"/> Save card for next time ?</label>
-                    </div>
-                    
-                    <button type='submit'>Subscribe Now</button>
-    
-                </form>
+   
+    <div>
+        <div class="section1b" >
+           
+        <div class="section3b"  data-aos="fade-up">
+
+          
+
+            <div class="profile-header">
+                <h3 class="very" id="heading" data-aos="fade-up">Review application</h3>
+                <p id="paragraph" data-aos="fade-up">Please review your loan application details before you proceed
+                </p>
+                
+                <a class="flow" id="continueButton" style="display: none;" href="eligible.html">Continue</a>
+
             </div>
+
             
+
+           
+
+            
+
+
+            <div class="smallcont6">
+               <!--  <div class="details">
+                    <p>Name</p>
+                    <div class="nameConty">
+                        <p id="fName">Engage</p>
+                        <p id="lName">Dada</p>
+                    </div> 
+                    
+                </div>-->
+                <div class="details">
+                    <p>Loan Amount</p>
+                    <p id="loanAmount">40000</p>
+                </div>
+                <div class="details">
+                    <p>Amount to payback</p>
+                    <p id="paybackAmount"></p>
+                </div>
+                <div class="details">
+                    <p>Application Date</p>
+                    <p id="applyDate">15/10/2023</p>
+                </div>
+                <div class="details">
+                    <p>Payback Date</p>
+                    <p id="paybackDate">15/10/2023</p>
+                </div>
+                <div class="details">
+                    <p>Duration</p>
+                    <p id="durationValue">30days</p>
+                </div>
+                <div class="details">
+                    <p>Interest</p>
+                    <p>0.06%</p>
+                </div>
+                <div class="details">
+                    <p>Reference No</p>
+                    <p id="referenceNumber"></p>
+                </div>
+                <div class="details">
+                    <p>Bank</p>
+                    <p id="bankName">Bank name</p>
+                </div>
+                <div class="details">
+                    <p>Account No</p>
+                    <p id="accountNumber">0122334433</p>
+                </div>
+            </div>
+
+
+
+            <!-- Modal Container -->
+            <div id="myModal" class="modal-container">
+                <!-- Modal Content -->
+                <div class="modal-content">
+                    <span class="close-button" onclick="closeModal()">&times;</span>
+                    <h2 >Service Charge</h2>
+                    <p>Your service charge for this application is NGN500. Please note that the charge will be refunded within 24hrs if your application is not approved.
+                      Do you wish to continue ?
+                    </p>
+
+                    <div class="btn-divs">
+                      <div class="btnz btnz2" onclick="closeModal()">
+                        No
+                      </div>
+                      <a class="btnz" href="https://paystack.com/pay/u9rvl7spa8"> Yes</a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <a class="flow" onclick="openModal()" href="#">Submit</a>
+
+
         </div>
+       
+
     </div>
-    <footer class="prev-foot">
-        <hr />
-        <div class="subber">
-            <p>&copy; 2023 Mutual Benefits</p>
-            <a href="https://doc-hosting.flycricket.io/mutualbenefits/b85cec96-aa34-4408-8e10-08b917a8e4a3/privacy"><p>privacy policy</p></a>
-        </div>
-    </footer>   
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js"></script>
     <script src="./Mail.js"></script>
+    <script src="script.js" defer></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+  <script>
+    AOS.init();
+  </script>
+
+
+
+<script>
+    // Function to set the "Application Date" to the current date
+    function setApplicationDateToCurrentDate() {
+        const applyDateElement = document.getElementById('applyDate');
+        const currentDate = new Date();
+
+        // Format the current date as 'dd/mm/yyyy'
+        const formattedDate = ('0' + currentDate.getDate()).slice(-2) + '/' + ('0' + (currentDate.getMonth() + 1)).slice(-2) + '/' + currentDate.getFullYear();
+
+        applyDateElement.textContent = formattedDate;
+    }
+
+    // Ensure that the JavaScript code runs after the DOM is fully loaded
+    document.addEventListener('DOMContentLoaded', setApplicationDateToCurrentDate);
+</script>
+
+<script>
+    // Function to retrieve and display data from local storage
+    function retrieveDataFromLocalStorage() {
+        const savedBankName = localStorage.getItem('selectedBank');
+        const savedAccountNumber = localStorage.getItem('accountNumber');
+        const savedAmount = localStorage.getItem('savedAmount1');
+        const savedDate = localStorage.getItem('savedDate');
+        const savedDuration = localStorage.getItem('dury');
+        const savedLastName = localStorage.getItem('lastName');
+        const savedfirstName = localStorage.getItem('user_name');
+
+
+
+        const bankNameElement = document.getElementById('bankName');
+        const accountNumberElement = document.getElementById('accountNumber');
+        const loanAmountElement = document.getElementById('loanAmount');
+
+        const applyDateElement = document.getElementById('applyDate');
+        const applyDurationElement = document.getElementById('durationValue');
+        const lastNameElement = document.getElementById('lName');
+        const firstNameElement = document.getElementById('fName');
+
+
+
+
+        if (savedBankName) {
+            bankNameElement.textContent = savedBankName;
+        }
+
+        if (savedAccountNumber) {
+            accountNumberElement.textContent = savedAccountNumber;
+        }
+
+        if (savedAmount) {
+            loanAmountElement.textContent = savedAmount;
+        }
+
+        if (savedDate) {
+            applyDateElement.textContent = savedDate;
+        }
+
+
+        if (savedLastName) {
+            lastNameElement.textContent = savedLastName;
+        }
+
+        if (savedfirstName) {
+            firstNameElement.textContent = savedfirstName;
+        }
+
+       
+    }
+
+    // Call the retrieve function when the page loads
+    retrieveDataFromLocalStorage();
+
+</script>
+
+
+<script>
+    // Function to calculate and set the payback amount with interest based on the duration
+    function calculatePaybackAmount() {
+        const durationElement = document.getElementById('durationValue');
+        const paybackAmountElement = document.getElementById('paybackAmount');
+
+        if (durationElement && paybackAmountElement) {
+            const durationText = durationElement.textContent;
+
+            let interestAmount = 0;
+            if (durationText.includes('15')) {
+                interestAmount = 1200;
+            } else if (durationText.includes('30')) {
+                interestAmount = 2450;
+            } else if (durationText.includes('60')) {
+                interestAmount = 3250;
+            }
+
+            // Get the initial loan amount
+            const loanAmountElement = document.getElementById('loanAmount');
+            const loanAmount = parseInt(loanAmountElement.textContent);
+
+            // Calculate the total payback amount by adding interest to the loan amount
+            const totalPaybackAmount = loanAmount  * 1000 + interestAmount;
+
+            paybackAmountElement.textContent = totalPaybackAmount;
+        }
+    }
+
+    // Ensure that the JavaScript code runs after the DOM is fully loaded
+    document.addEventListener('DOMContentLoaded', calculatePaybackAmount);
+</script>
+
+
+
+
+
+<script>
+  // Function to open the modal
+  function openModal() {
+      document.getElementById("myModal").style.display = "block";
+  }
+
+  // Function to close the modal
+  function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+  }
+</script>
+
+<script>
+    // Function to generate a random uppercase alphanumeric reference number
+    function generateRandomReferenceNumber() {
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        const referenceLength = 8;
+        let reference = '';
+
+        for (let i = 0; i < referenceLength; i++) {
+            const randomIndex = Math.floor(Math.random() * characters.length);
+            reference += characters.charAt(randomIndex);
+        }
+
+        return reference;
+    }
+
+    // Function to set the generated reference number in the HTML
+    function setReferenceNumber() {
+        const referenceNumberElement = document.getElementById('referenceNumber');
+        const randomReference = generateRandomReferenceNumber();
+        referenceNumberElement.textContent = randomReference;
+    }
+
+    // Call the function to set the reference number when the page loads
+    setReferenceNumber();
+</script>
+
+
+
+<script>
+    // Function to calculate the payback date based on the provided duration
+    function calculatePaybackDate() {
+        const durationElement = document.getElementById('durationValue');
+        if (durationElement) {
+            const durationText = durationElement.textContent;
+            const matches = durationText.match(/(\d+)days/);
+            if (matches) {
+                const duration = parseInt(matches[1]);
+                if (!isNaN(duration)) {
+                    const today = new Date();
+                    today.setDate(today.getDate() + duration);
+
+                    // Format the date as 'dd/mm/yyyy'
+                    const formattedDate = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
+                    
+                    const paybackDateElement = document.getElementById('paybackDate');
+                    paybackDateElement.textContent = formattedDate;
+                }
+            }
+        }
+    }
+
+    // Call the function to calculate the payback date when the page loads
+    calculatePaybackDate();
+    
+</script>
+
+
+
+
+ 
+
 </body>
 </html>
-

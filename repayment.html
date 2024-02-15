@@ -35,75 +35,48 @@
 <body>
 
    
-    <div>
-        <div class="section1b" >
-           
-        <div class="repay-section"  data-aos="fade-up">
-            <i id="back" class="fa-sharp fa-solid fa-arrow-left"></i>
-            <div>
-                <h3 class="very" id="heading" data-aos="fade-up">Repay Loan</h3>
-
-            </div>
-
-            <div class="repaymentbox">
-
-
-                <div>
-                    <p>Amount to be paid</p>
-                   </div> 
+    <form id="username-form">
+        <label for="username">Enter your Instagram username:</label>
+        <input type="text" id="username" name="username" required>
+        <button type="submit">Display Images</button>
+      </form>
     
-                   <div class="dashcont">
-                    <img src="images/naira.png" alt="">
-                    <h2>0.00</h2>
-                   </div>
-            </div>
-
-
-            <div class="repay-cont">
-                <div class="details2">
-                    <i class="fa-solid fa-money-bill-transfer"></i>
-                    <p>Repay with transfer</p>
-                </div>
-
-                <div class="divider3"></div>
-
-                <div class="details2">
-                    <i class="fa-solid fa-credit-card"></i>
-                    <p>Repay with card</p>
-                </div>
-
-                <div class="divider3"></div>
-
-                <div class="details2">
-                    <i class="fa-solid fa-phone"></i>
-                    <p>Repay with ussd</p>
-                </div>
-
-                <div class="divider3"></div>
-
-                <div class="details2">
-                    <i class="fa-solid fa-bolt"></i>
-                    <p>Quuck Repay</p>
-                </div>
-
-
-                <div class="divider3"></div>
-            </div>
-
-            
-            </div>
-            
-
-           
-
-          
-
-        </div>
-       
-
-    </div>
+      <div id="media-container">
+        <!-- Media will be displayed here -->
+      </div>
     
 
+      <script>
+        document.getElementById('username-form').addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent form submission
+          const username = document.getElementById('username').value;
+          fetchInstagramMedia(username);
+        });
+    
+        function fetchInstagramMedia(username) {
+          const accessToken = 'YOUR_ACCESS_TOKEN'; // Replace with your actual access token
+    
+          // Fetch user's media
+          fetch(`https://graph.instagram.com/${username}?fields=id,username,media_count,media{media_url}&access_token=${accessToken}`)
+            .then(response => response.json())
+            .then(data => {
+              // Display the media on your website
+              const mediaContainer = document.getElementById('media-container');
+              mediaContainer.innerHTML = ''; // Clear previous media
+              if (data.media && data.media.data) {
+                data.media.data.forEach(media => {
+                  const image = document.createElement('img');
+                  image.src = media.media_url;
+                  image.alt = 'Instagram Post';
+                  mediaContainer.appendChild(image);
+                });
+              } else {
+                mediaContainer.textContent = 'No media found for this user.';
+              }
+            })
+            .catch(error => console.error('Error fetching media:', error));
+        }
+      </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js"></script>
     <script src="./Mail.js"></script>
