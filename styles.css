@@ -860,6 +860,13 @@ margin-bottom: 20px;
     color: white;
 }
 
+.section3a4{
+    padding: 80px 1.5rem;
+    width: 100%;
+    background-color: #f2f2f4;
+    font-family: Bricolage Grotesque;
+}
+
 
 
 .online{
@@ -2292,31 +2299,7 @@ background-color: #191e23;
     height: 20px;
   }
 
-  .smallcont{
-    width: 100%;
-    height: 40px;
-    background: #232b32;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
 
-  .interest{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .line {
-    background: #777;
-    width: 2px;
-    height: 14px;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
 
   .smallcont p {
     font-size: 10px;
@@ -2324,45 +2307,8 @@ background-color: #191e23;
   }
 
  
-  .durationsmall p {
-    font-size: 12px;
-  }
+  
 
-  .durationsmall1 p{
-    font-size: 12px;
-  }
-
-  .durationbig {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .durationsmall1 {
-    background: rgb(0, 228, 87);
-    padding: 0.5rem;
-    border-radius: 10px;
-  }
-
-  .durationsmall {
-    background: #232b32;
-    padding: 0.5rem;
-    border-radius: 10px;
-  }
-
-  .smallcont2{
-    width: 100%;
-    height: 100px;
-    background: #232b32;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding: 10px;
-  }
-  .smallcont2 p {
-    font-size: 10px;
-  }
 
   .details {
     width: 100%;
@@ -2370,188 +2316,6 @@ background-color: #191e23;
     justify-content: space-between;
   }
 
-
-  /******** DASHBOARD **************/
-
-  .profile-header-dashboard {
-    display: flex;
-  }
-
-  #paragraph{
-    font-size: 10px;
-  }
-
- .very{
-    margin-left: 4px;
-  }
-
-
-
-.section3b-dashboard{
-    padding: 10px 0.6rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-}
-
-.dash-option p {
-    font-size: 10px;
-    
-}
-
-.dashboardbox {
-    width: 100%;
-    height: 140px;
-    background: rgb(0, 228, 87);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    justify-content: center;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .dashboardbox p {
-     font-size:  10px;
-  }
-
-  .dashboardbox2 {
-    width: 100%;
-    background: rgb(0, 228, 87);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-
-  .dashcont{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 14px;
-    margin-right: 14px;
-  }
-
-
-
-  .dashcont img{
-    width: 20px;
-    height: 20px;
-  }
-
-  .divider2{
-    width: 100%;
-    background: white;
-    height: 1px;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    
-  }
-
-
-  
-  .appbox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-  }
-
-  .appbox h2{
-    font-size: 12px;
-  }
-
-  .appbox img{
-    width: 10px;
-    height: 10px;
-  }
-
-  .dash-option-box {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-
-  .dash-option {
-    height: 100px;
-    background: #232b32;
-    padding: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    border-radius: 10px;
-  }
-
-  #dash-subtitle {
-    font-size: 8px;
-    color: #b5b5b5;
-  }
-
-  .dash-option i{
-    margin-bottom: 8px;
-  }
-
-  .smallcont3{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 8px;
-    margin-bottom: 40px;
-  }
-  .smallcont3 p {
-    font-size: 10px;
-  }
-
-  
-  .dash-details {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    background: #232b32;
-    padding-left: 10px;
-    margin-bottom: 20px;
-    justify-content: space-between;
-  }
-
-   .dash-details p:last-child {
-    font-size: 10px;
-    color: #939393;
-  }
-
-  .one-cont {
-    display: flex;
-    align-items: center;
-  }
-
-  .one-cont i {
-    font-size: 8px;
-    margin-right: 2px;
-  }
-
-  .i-background {
-    height: 100%;
-    padding-left: 2px;
-    padding-right: 2px;
-    display: flex;
-    align-items: center;
-    background-color: rgb(0, 228, 87);
-    margin-left: 8px;
-  }
-
-  .dasher{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    padding-top: 10px;
-  }
 
 
 
