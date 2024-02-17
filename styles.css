@@ -476,9 +476,16 @@ nav a{
 }
 
 .trust2d img{
-    height: 200px;
+    height: 250px;
     width: 400px;
 }
+
+.trust2c img{
+    height: 200px;
+    width: 250px;
+    align-items: center;
+}
+
 
 .trust2e img{
     height: 200px;
@@ -526,8 +533,8 @@ nav a{
 .i-div{
     width: 100%;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
 }
 
 
