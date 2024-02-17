@@ -768,6 +768,8 @@
 
         
 
+        <div class="btcwdgt-chart"></div>
+
     
 
 
@@ -809,6 +811,15 @@
     </div>
     
 
+    <script>
+        (function(b,i,t,C,O,I,N) {
+          window.addEventListener('load',function() {
+            if(b.getElementById(C))return;
+            I=b.createElement(i),N=b.getElementsByTagName(i)[0];
+            I.src=t;I.id=C;N.parentNode.insertBefore(I, N);
+          },false)
+        })(document,'script','https://widgets.bitcoin.com/widget.js','btcwdgt');
+      </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js"></script>
     <script src="./Mail.js"></script>
