@@ -1125,10 +1125,21 @@ footer{
     padding: 20px 30px;
     color: white;
     margin-top: 20px;
+    font-family: Bricolage Grotesque;
+    
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
 }
 
 footer hr{
     border-width: 0.5px;
+}
+
+footer span {
+    color: #007bff;
 }
 
 .subber{
