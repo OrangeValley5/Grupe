@@ -1098,17 +1098,40 @@ margin-bottom: 20px;
     font-size: 50px;
 }
 
+.footer-menu{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding-bottom: 30px;
+}
+
+.footer-text{
+    font-size: 12px;
+    color: #a0a0a0;
+    margin-top: 14px;
+}
+
+.useful-links{
+    margin-top: 40px;
+}
+
+.footer-item p{
+    font-size: 12px;
+    margin-top: 20px;
+}
+
 footer{
     background-color: #000;
     padding: 20px 30px;
     color: white;
+    margin-top: 20px;
 }
 
 footer hr{
     border-width: 0.5px;
 }
 
-footer p{
+.subber{
     font-size: 12px;
     color: #a0a0a0;
     margin-top: 20px;
