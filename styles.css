@@ -480,6 +480,11 @@ nav a{
     width: 400px;
 }
 
+.trust2e img{
+    height: 200px;
+    width: 400px;
+}
+
 .trust4-btn{
     display: flex;
     justify-content: center;
