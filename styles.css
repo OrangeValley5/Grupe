@@ -283,6 +283,7 @@ nav a{
     background-color: rgba(77, 77, 77, 0.6);
     box-shadow: 5 8px 8px rgba(0, 0, 0, 0.9);
     font-family: Bricolage Grotesque;
+    backdrop-filter: blur(6px);
 }
 
 .login-card h2{
@@ -346,6 +347,7 @@ nav a{
     color: black;
     font-family: Bricolage Grotesque;
   }
+  
 
   .login-card2 .input-field {
     padding-left: 30px;
@@ -364,18 +366,6 @@ nav a{
 
 
   
-
-  .login-card button{
-    height: 45px;
-    border-radius: 5px;
-    font-family: Bricolage Grotesque;
-    background-color: transparent;
-    color: white;
-    margin-top: 20px;
-    border: none;
-    border: 1px solid orange;
-    text-decoration: none;
-  }
 
 
   .flow{
