@@ -19,13 +19,14 @@ body{
 }
 
 nav{
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.2); /* Adjust opacity here */
     color: white;
     display:  flex;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
     padding: 4rem 6rem;
+    border-radius: 20px;
 }
 nav span{
     color: #000000;
@@ -126,10 +127,71 @@ nav a{
     animation: circleAnimation s infinite alternate; /* Apply the animation */
 }
 
+
+.background-image {
+    position: relative;
+    width: 100%; /* Adjust as needed */
+    height: 100vh; /* Adjust as needed */
+    background-image: url('https://images.unsplash.com/photo-1579650382425-256093056bca?q=80&w=2824&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Replace with your image link */
+    background-size: cover; /* Adjust to cover the div */
+    background-position: center; /* Center the background image */
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 2rem;
+    background-color: rgba(0, 0, 0, 0.2); /* Adjust opacity here */
+    backdrop-filter: blur(0px); /* Adjust blur here */
+  }
+
+  .background-image h1{
+    font-size: 3rem;
+    color: white;
+    font-weight: bolder;
+    font-family: Bricolage Grotesque;
+    line-height: 55px;
+    font-size: 70px;
+  }
+
+  .div2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+
+  .button{
+    width: 100%;
+    padding: 15px 100px;
+    color: white;
+    background-color: orange;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+
+  .button2{
+    width: 100%;
+    padding: 15px 100px;
+    color: orange;
+    border: 1px solid #fff;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+  }
 .tested{
 
-    height: 330px;
-    width: 330px;
+    height: 350px;
+    width: 300px;
     
 }
 
