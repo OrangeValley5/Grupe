@@ -260,7 +260,7 @@ nav a{
     flex-direction: column;
     padding: 20px 2rem;
     background-color: rgba(0, 0, 0, 0.8); /* Adjust opacity here */
-    backdrop-filter: blur(6px); /* Adjust blur here */
+    backdrop-filter: blur(8px); /* Adjust blur here */
   }
 
   .background-image2 h1{
@@ -457,6 +457,6 @@ nav a{
         flex-direction: column;
         padding: 20px 1.5rem;
         background-color: rgba(0, 0, 0, 0.8); /* Adjust opacity here */
-        backdrop-filter: blur(6px); /* Adjust blur here */
+        backdrop-filter: blur(8px); /* Adjust blur here */
       }
 }
