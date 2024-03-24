@@ -287,12 +287,12 @@ nav a{
 }
 
 .login-card h2{
-    color: black;
+    color: orange;
     text-align: center;
     margin-top: 40px;
     font-size: 18px;
-    margin-bottom: 30px;
-    font-weight: lighter;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .login-card h5{
@@ -374,25 +374,29 @@ nav a{
     background-color: orange;
     color: white;
     border: none;
-    text-align: center;
+    text-align: center; 
     text-decoration: none;
     padding: 15px 20px;
+    font-size: 14px;
   }
 
   .flow2{
     border-radius: 5px;
     font-family: Bricolage Grotesque;
-    color: rgb(173, 112, 0);
+    color: rgb(255, 255, 255);
     border: 1px solid rgb(255, 255, 255);
     text-align: center;
     text-decoration: none;
     padding: 15px 20px;
     margin-bottom: 30px;
+    font-size: 14px;
   }
 
   .login-card p{
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     text-align: center;
+    font-weight: lighter;
+    font-size: 14px;
   }
 
   .dob{
@@ -418,8 +422,6 @@ nav a{
   /* Style for the select input when focused */
   select:focus, select:valid {
     /* Set the active color when the input is focused or an option is selected */
-    border-color: orange; /* Change this color to your desired active color */
-    box-shadow: 0 0 5px orange; /* Optional: Add a box shadow for better visual feedback */
   }
 
 @media screen and (max-width: 768px) {
