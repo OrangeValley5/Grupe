@@ -280,7 +280,7 @@ nav a{
     border-radius: 10px;
     padding: 1rem 2.0rem;
     color: white;
-    background-color: rgba(77, 77, 77, 0.6);
+    background-color: rgba(77, 77, 77, 0.4);
     box-shadow: 5 8px 8px rgba(0, 0, 0, 0.9);
     font-family: Bricolage Grotesque;
     backdrop-filter: blur(6px);
