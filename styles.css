@@ -11,7 +11,7 @@
 
 body{
     margin: 0px;
-    font-family: 'Poppins';
+    font-family: Bricolage Grotesque;
 }
 
 .container{
@@ -278,9 +278,9 @@ nav a{
     margin-top: 50px;
     background-color: #000000;
     border-radius: 10px;
-    padding: 1rem 3rem;
+    padding: 1rem 2.0rem;
     color: white;
-    background-color: rgba(157, 157, 157, 0.6);
+    background-color: rgba(77, 77, 77, 0.6);
     box-shadow: 5 8px 8px rgba(0, 0, 0, 0.9);
     font-family: Bricolage Grotesque;
 }
@@ -339,7 +339,7 @@ nav a{
     height: 40px;
     border-radius: 5px;
     background: transparent;
-    border: 1px solid #c1c1c1;
+    border: 1px solid #848484;
     font-family: 'Poppins';
     padding-top: 25px;
     padding-bottom: 25px;
@@ -448,6 +448,20 @@ nav a{
 
     .login-card{
         width: 100%;
-        padding: 1rem 1.5rem;
-    }
+        padding: 1rem 1.0rem;
+    } 
+
+    .overlay2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 1.5rem;
+        background-color: rgba(0, 0, 0, 0.8); /* Adjust opacity here */
+        backdrop-filter: blur(6px); /* Adjust blur here */
+      }
 }
