@@ -1,162 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YR1205HWYG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YR1205HWYG');
-</script>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="index.css">
-    <link rel="shortcut icon" type="images/png" href="images/logo.png">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!-- Animation -->
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Paynow</title>
-    <script src="./Mail.js"></script>
-    <script src="script.js" defer></script>
-    
-    <script>
-      // Wait for the document to fully load
-document.addEventListener("DOMContentLoaded", function () {
-  // Use setTimeout to show the button after 15 seconds (15000 milliseconds)
-  setTimeout(function () {
-    var continueButton = document.getElementById("continueButton");
-    if (continueButton) {
-      continueButton.style.display = "block"; // Display the button
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
     }
-  }, 15000); // 15 seconds delay
-});
 
-    </script>
+    .sidebar {
+        width: 250px;
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        height: 100vh;
+        position: fixed;
+        transition: width 0.3s; /* Add transition for smoother animation */
+    }
 
+    .content {
+        padding: 20px;
+        flex: 1;
+        margin-left: 300px;
+    }
 
+    /* Style the sidebar links */
+    .sidebar a {
+        display: block;
+        color: #fff;
+        padding: 10px 0;
+        text-decoration: none;
+    }
 
-    
+    /* Change color on hover */
+    .sidebar a:hover {
+        background-color: #555;
+    }
+
+    /* Style the active link */
+    .sidebar .active {
+        background-color: #4CAF50;
+    }
+
+    /* Media query for mobile */
+    @media screen and (max-width: 768px) {
+        .sidebar {
+            width: 0;
+            display: none; /* Collapse the sidebar by default */
+        }
+
+        .sidebar.show {
+            width: 250px; /* Expand the sidebar when it's toggled */
+        }
+
+        .content {
+            margin-left: 0; /* Adjust content margin when sidebar is collapsed */
+        }
+    }
+</style>
 </head>
 <body>
 
-   
-    <div>
-        <div class="section1b" >
-           
-        <div class="section4b"  data-aos="fade-up">
+<div class="section1" >
+            <div class="col-container" data-aos="fade-up">
+                <div class="col1">
+                    <div class="double-container">
+                        
 
+                        <div class="fone-container">
+                        <img src="images/bt.png" class="tested" alt="">
+                        </div>
 
-            <div class="profile-row2" data-aos="fade-up">
-                <a href="login.html" data-aos="fade-up"><div class="profile-card1 sizing">
+                        
+
+                        <div class="background-container">
+                            </div>
+
                     </div>
-                </div></a>
-            </div>
-
-            <div class="progress-container" data-aos="fade-up">
-                <div class="progress">
-                  <div class="progress-circle"></div>
-                  <div class="progress-mask"></div>
+                    <h1 id="typed-text"></h1>
+                    <div class="col1-div">
+                        <p>
+                            We specialize in providing secure and reliable investment solutions tailored to your financial goals.
+                         </p>
+                    </div>
+                    
                 </div>
-                <span class="progress-text">0%</span>
-              </div>
+                <div class="col2">
+                    
 
-            <div class="profile-header2">
-                <h3 class="very" id="heading" data-aos="fade-up">Verifying your identity</h3>
-                <p id="paragraph" data-aos="fade-up">We are verifying your identity and the information you provided. Please hold on a little</p>
-                
-                <a class="flow" id="continueButton" style="display: none;" href="eligible.html">Continue</a>
-
+                    <a href="preview.html"><button >See our packages</button></a>                  
+                </div>
             </div>
+
+            
 
         </div>
-       
+<script>
+    function toggleSidebar() {
+        var sidebar = document.getElementById('sidebar');
+        sidebar.classList.toggle('show'); // Toggle the 'show' class on sidebar
+    }
+</script>
 
-    </div>
-    
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js"></script>
-    <script src="./Mail.js"></script>
-    <script src="script.js" defer></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-  <script>
-
-const heading = document.getElementById('heading');
-const paragraph = document.getElementById('paragraph');
-
-const newTexts = [
-  {
-    heading: 'Verification Complete',
-    paragraph: 'Identity verification is complete.Click on the button below to proceed.',
-  },
-  {
-    heading: 'Verification Complete',
-    paragraph: 'Identity verification is complete. Click on the button below to proceed.',
-  },
-  // Add more text variations as needed
-];
-
-const delayBetweenTextChanges = 15000; // Adjust as needed (in milliseconds)
-let currentIndex = 0;
-
-function changeText() {
-  if (currentIndex < newTexts.length) {
-    const newText = newTexts[currentIndex];
-    heading.textContent = newText.heading;
-    paragraph.textContent = newText.paragraph;
-    currentIndex++; // Move to the next text
-  }
-}
-
-// Change the text after the specified delay and stop
-setTimeout(changeText, delayBetweenTextChanges);
-
-//stops here
-
-
-
-
-
-
-
-    // Get the progress circle and progress text elements
-const progressCircle = document.querySelector('.progress-circle');
-const progressText = document.querySelector('.progress-text');
-
-// Function to update the progress bar
-function updateProgress(percentage) {
-  const angle = (percentage / 100) * 360;
-  progressCircle.style.transform = `rotate(${angle}deg)`;
-  progressText.textContent = `${percentage}%`;
-}
-
-// Start the progress automatically when the page loads
-let currentPercentage = 0;
-const increment = 1; // Amount to increment the percentage
-const intervalDuration = 150; // Interval duration in milliseconds (adjust as needed)
-
-const interval = setInterval(() => {
-  currentPercentage += increment;
-  if (currentPercentage <= 100) {
-    updateProgress(currentPercentage);
-  } else {
-    clearInterval(interval); // Stop the interval when progress reaches 100%
-  }
-}, intervalDuration);
-
-  </script>
 </body>
 </html>
