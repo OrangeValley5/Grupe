@@ -283,7 +283,6 @@ nav a{
     background-color: rgba(77, 77, 77, 0.4);
     box-shadow: 5 8px 8px rgba(0, 0, 0, 0.9);
     font-family: Bricolage Grotesque;
-    backdrop-filter: blur(6px);
 }
 
 .login-card h2{
@@ -374,7 +373,7 @@ nav a{
     background-color: orange;
     color: white;
     border: none;
-    text-align: center; 
+    text-align: center;
     text-decoration: none;
     padding: 15px 20px;
     font-size: 14px;
