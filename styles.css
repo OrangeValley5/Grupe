@@ -258,9 +258,8 @@ nav a{
     align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding: 20px 2rem;
-    background-color: rgba(0, 0, 0, 0.2); /* Adjust opacity here */
+    background-color: rgba(0, 0, 0, 0.6); /* Adjust opacity here */
     backdrop-filter: blur(5px); /* Adjust blur here */
   }
 
@@ -276,11 +275,12 @@ nav a{
 .login-card{
     height: auto;
     width: 500px;
+    margin-top: 50px;
     background-color: #000000;
     border-radius: 10px;
     padding: 1rem 3rem;
     color: white;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.6);
     box-shadow: 5 8px 8px rgba(0, 0, 0, 0.9);
     font-family: Bricolage Grotesque;
 }
@@ -329,7 +329,7 @@ nav a{
     height: 40px;
     border-radius: 5px;
     background: transparent;
-    border: 1px solid #c0c0c0;
+    border: 1px solid #979797;
     font-family: 'Poppins';
     padding-top: 25px;
     padding-bottom: 25px;
@@ -359,10 +359,40 @@ nav a{
     height: 45px;
     border-radius: 5px;
     font-family: Bricolage Grotesque;
-    background-color: orange;
+    background-color: transparent;
     color: white;
     margin-top: 20px;
     border: none;
+    border: 1px solid orange;
+    text-decoration: none;
+  }
+
+
+  .flow{
+    border-radius: 5px;
+    font-family: Bricolage Grotesque;
+    background-color: orange;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 20px;
+  }
+
+  .flow2{
+    border-radius: 5px;
+    font-family: Bricolage Grotesque;
+    color: rgb(173, 112, 0);
+    border: 1px solid rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+  }
+
+  .login-card p{
+    margin-bottom: 20px;
+    text-align: center;
   }
 
 @media screen and (max-width: 768px) {
