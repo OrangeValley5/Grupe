@@ -415,6 +415,163 @@ nav a{
     width: 100%;
   }
 
+  .modal0 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.5); /* Black w/ 50% opacity */
+    padding-top: 60px; /* Location of the box */
+    backdrop-filter: blur(5px);
+}
+
+.modal-content0 {
+    background-color: #ffffff;
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 20px;
+    border-radius: 14px;
+    color: black;
+    width: 60%;
+    height: 65%; /* Could be more or less, depending on screen size */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    align-content: center;
+    font-family: Bricolage Grotesque;
+    border: 1px solid #ffffff;
+}
+
+
+.modal-content0 a{
+    width: 80%;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    background-color: orange;
+    padding: 15px 30px;
+    font-weight: 600;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    
+}
+
+.sub-amount{
+    font-size: 80px;
+    font-weight: bolder;
+}
+
+.modal-content0 span{
+    background-color: rgb(255, 236, 199);
+    padding: 3px 13px;
+    font-size: 30px;
+    color: orange;
+    border-radius: 100px;
+}
+
+.modal-content0 h6{
+    font-size: 18px;
+    color: #686868;
+}
+
+.sub-title{
+    color: #848484;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.selections{
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-between;
+    border: 1px solid #848484;
+    padding: 15px 20px;
+    border-radius: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+.selections img{
+    width: 24px;
+    height: 24px;
+}
+
+.selections div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal1 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.5); /* Black w/ 50% opacity */
+    padding-top: 60px; /* Location of the box */
+    backdrop-filter: blur(5px);
+}
+
+.modal-content1 {
+    background-color: #ffffff;
+    margin: 35% auto; /* 5% from the top and centered */
+    padding: 20px;
+    border-radius: 14px;
+    color: black;
+    width: 60%;
+    height: 70%; /* Could be more or less, depending on screen size */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    align-content: center;
+    font-family: Bricolage Grotesque;
+    border: 1px solid #ffffff;
+}
+
+
+.modal-content1 a{
+    width: 60%;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    background-color: #ffa600;
+    padding: 15px 30px;
+    font-weight: 600;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 40px;
+}
+
+.modal-content1 h6{
+    font-size: 24px;
+    color: #686868;
+}
+
+.sub-title2{
+    color: #848484;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+
 
 
 
@@ -459,4 +616,109 @@ nav a{
         background-color: rgba(0, 0, 0, 0.8); /* Adjust opacity here */
         backdrop-filter: blur(10px); /* Adjust blur here */
       }
+
+      .modal0 {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 10000; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100vh; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgba(0,0,0,0.5); /* Black w/ 50% opacity */
+        padding-top: 60px; /* Location of the box */
+        backdrop-filter: blur(5px);
+    }
+    
+    .modal-content0 {
+        background-color: #ffffff;
+        margin: 35% auto; /* 5% from the top and centered */
+        padding: 20px;
+        border-radius: 14px;
+        color: black;
+        width: 80%;
+        height: 50%; /* Could be more or less, depending on screen size */
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        align-content: center;
+        font-family: Bricolage Grotesque;
+        border: 1px solid #ffffff;
+    }
+    
+    
+    .modal-content0 a{
+        width: 100%;
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        background-color: orange;
+        padding: 15px 30px;
+        font-weight: 600;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 16px;
+    }
+    
+    .modal1 {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 10000; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100vh; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgba(0,0,0,0.5); /* Black w/ 50% opacity */
+        padding-top: 60px; /* Location of the box */
+        backdrop-filter: blur(5px);
+    }
+    
+    .modal-content1 {
+        background-color: #ffffff;
+        margin: 35% auto; /* 5% from the top and centered */
+        padding: 20px;
+        border-radius: 14px;
+        color: black;
+        width: 80%;
+        height: 60%; /* Could be more or less, depending on screen size */
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        align-content: center;
+        font-family: Bricolage Grotesque;
+        border: 1px solid #ffffff;
+    }
+    
+    
+    .modal-content1 a{
+        width: 100%;
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        background-color: orange;
+        padding: 15px 30px;
+        font-weight: 600;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .selections{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+    }
+
+    .selections img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .modal-content1 a{
+        margin-top: 10px;
+    }
 }

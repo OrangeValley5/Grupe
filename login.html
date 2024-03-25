@@ -20,86 +20,63 @@
     <script src="./Mail.js"></script>
 
     <script type="text/javascript" src="https://sdk.monnify.com/plugin/monnify.js"></script>
-    <script>
-        function payWithMonnify() {
-            MonnifySDK.initialize({
-                amount: 100,
-                currency: "NGN",
-                reference: new String((new Date()).getTime()),
-                customerFullName: "Damilare Ogunnaike",
-                customerEmail: "ogunnaike.damilare@gmail.com",
-                apiKey: "MK_PROD_FLX4P92EDF",
-                contractCode: "626609763141",
-                paymentDescription: "Lahray World",
-                metadata: {
-                    "name": "Damilare",
-                    "age": 45
-                },
-                incomeSplitConfig: [{
-                    "subAccountCode": "MFY_SUB_342113621921",
-                    "feePercentage": 50,
-                    "splitAmount": 1900,
-                    "feeBearer": true
-                }, {
-                    "subAccountCode": "MFY_SUB_342113621922",
-                    "feePercentage": 50,
-                    "splitAmount": 2100,
-                    "feeBearer": true
-                }],
-
-                onLoadStart: () => {
-                    console.log("loading has started");
-                },
-                onLoadComplete: () => {
-                    console.log("SDK is UP");
-                },
-
-                onComplete: function(response) {
-                    //Implement what happens when the transaction is completed.
-                    console.log(response);
-                },
-                onClose: function(data) {
-                    //Implement what should happen when the modal is closed here
-                    console.log(data);
-                }
-            });
-        }
-    </script>
+    
 </head>
 <body>
-    <div class="section">
+    <div class="background-image2">
+        <div class="overlay2">
+  
+            <nav>
+                <h4 class="logo">MB </h4>
         
-        <h4>Paynow <span class="spanner">Loan</span></h4>
-        
-        <div class="login-card"  data-aos="fade-up">
-            <h2>Sign in</h2>
-            <h5 class="alat" id="my-paragraph">Account not found !</h5>
-            <form action="">
-                <div class="input-container">
-                    <i class="fa-solid fa-envelope icon" ></i>
-                    <input id="email" type="email" class="input-field" placeholder="Email Address">
+                <ul>
+                   <!-- <li><a href="login.html" class="active2">Sign In</a></li>-->
+                    <li><a href="" class="active">Our packages</a></li>
+                </ul>
+  
+                <div onclick="openModal()" class="menu-toggle">
+                    <div  class="hamburger"></div>
                   </div>
-
+            </nav>
+  
+        
+  
+          
+          <div class="login-card"  data-aos="fade-up">
+              <h2>Welcome back</h2>
+              <p> Sign in to continue</p>
+              
+              <form action="">
+               
+  
                   <div class="input-container">
-                    <i class="fa-solid fa-lock icon"></i>
-                    <input type="password" class="input-field" placeholder="Password">
-                  </div>
-                  
-                  <div class="forgot">
-                    <label class="cus"><input type="checkbox"/>Remember me</label>
-                    <a href="Identity.html"><p>Forgot password?</p></a>
-                  </div>
+                      <i class="fa-solid fa-envelope icon" ></i>
+                      <input id="email" type="email" class="input-field" placeholder="Email Address">
+                    </div>
+  
+                    <div class="input-container">
+                      <i class="fa-solid fa-lock icon"></i>
+                      <input type="password" class="input-field" placeholder="Password">
+                    </div>
+  
 
-                  <a class="flow"  onclick="payWithMonnify()" href="login.html">Sign In</a>
-                  <button class="create" ><a href="signup.html"> Create Account</a></button>
-
+  
                   
-                
-            </form>
+                    
+                   
+  
+                    <a class="flow" href="#">Sign in</a>
+                    <a class="flow2" href="login.html"> Create Account</a></button>
+  
+                    
+                  
+              </form>
+          </div>
+            
+  
+  
         </div>
-        
     </div>
-    
     <script src="./Mail.js"></script>
     <script src="script.js" defer></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
