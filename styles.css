@@ -578,7 +578,6 @@ nav a{
 
 .pay-box{
     height: 50px;
-    margin-bottom: 30px;
     margin-top: 8px;
     padding-left: 14px;
     background-color: #f3f3f3;
@@ -878,5 +877,6 @@ nav a{
         font-size: 14px;
         color: #686868;
         font-weight: lighter;
+        text-align: center;
     }
 }
