@@ -528,12 +528,12 @@ nav a{
 
 .modal-content1 {
     background-color: #ffffff;
-    margin: 35% auto; /* 5% from the top and centered */
+    margin: 5% auto; /* 5% from the top and centered */
     padding: 20px;
     border-radius: 14px;
     color: black;
     width: 60%;
-    height: 70%; /* Could be more or less, depending on screen size */
+    height: 80%; /* Could be more or less, depending on screen size */
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -649,12 +649,12 @@ nav a{
 
 .modal-content7 {
     background-color: #ffffff;
-    margin: 35% auto; /* 5% from the top and centered */
+    margin: 5% auto; /* 5% from the top and centered */
     padding: 20px;
     border-radius: 14px;
     color: black;
     width: 60%;
-    height: 70%; /* Could be more or less, depending on screen size */
+    height: 80%; /* Could be more or less, depending on screen size */
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -826,5 +826,51 @@ nav a{
 
     .modal-content1 a{
         margin-top: 10px;
+    }
+
+    .modal7 {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 10000; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100vh; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgba(0,0,0,0.5); /* Black w/ 50% opacity */
+        padding-top: 60px; /* Location of the box */
+        backdrop-filter: blur(5px);
+    }
+    
+    .modal-content7 {
+        background-color: #ffffff;
+        margin: 35% auto; /* 5% from the top and centered */
+        padding: 20px;
+        border-radius: 14px;
+        color: black;
+        width: 60%;
+        height: 70%; /* Could be more or less, depending on screen size */
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        align-content: center;
+        font-family: Bricolage Grotesque;
+        border: 1px solid #ffffff;
+    }
+    
+    
+    .modal-content7 a{
+        width: 60%;
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        background-color: #ffa600;
+        padding: 15px 30px;
+        font-weight: 600;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 16px;
+        margin-top: 40px;
     }
 }

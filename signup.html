@@ -38,7 +38,7 @@
 
         <p class="sub-title">We charge a monthly subscription fee of $15. You can choose to cancel your subscription at any time</p>
 
-        <a onclick="openModal1()" href="#">Subscribe</a>
+        <a onclick="closeModal(), openModal1()" href="#">Subscribe</a>
 
         <div class="cirx">
 
@@ -49,7 +49,7 @@
 
 <div id="myModal1" class="modal1">
   <div class="modal-content1">
-      <span class="close" onclick="closeModal()">&times;</span>
+      <span class="close" onclick="closeModal1()">&times;</span>
       
       <h6>Subscribe</h6>
 
@@ -86,14 +86,14 @@
         <img class="check-icon" src="images/checker.png" alt="" style="display: none;">
       </div>
 
-      <a onclick="openModal7()" href="#">continue</a>
+      <a onclick="closeModal1(), openModal7()" href="#">continue</a>
 
   </div>
 </div>
 
 <div id="myModal7" class="modal7">
 
-  <div class="modal-cotent7">
+  <div class="modal-content7">
 
     <p id="dee" class="cont-subtitle">You are to make a payment of <span id="displayAmount"></span> using
       your selected payment method to the address below. Screenshot
