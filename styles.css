@@ -472,11 +472,38 @@ nav a{
     font-size: 30px;
     color: orange;
     border-radius: 100px;
+    align-self: flex-end;
+}
+
+.modal-content1 span{
+    background-color: rgb(255, 236, 199);
+    padding: 3px 13px;
+    font-size: 30px;
+    color: orange;
+    border-radius: 100px;
+    align-self: flex-end;
+
+}
+
+.modal-content7 span{
+    background-color: rgb(255, 236, 199);
+    padding: 3px 13px;
+    font-size: 30px;
+    color: orange;
+    border-radius: 100px;
+    align-self: flex-end;
 }
 
 .modal-content0 h6{
     font-size: 18px;
     color: #686868;
+}
+
+#dee{
+    font-weight: lighter;
+    color: #919191;
+    font-size: 14px;
+    text-align: center;
 }
 
 .sub-title{
@@ -492,7 +519,7 @@ nav a{
     flex-direction: row;
     width: 60%;
     justify-content: space-between;
-    border: 1px solid #848484;
+    border: 1px solid #cccccc;
     padding: 15px 20px;
     border-radius: 15px;
     margin-left: 20px;
@@ -536,7 +563,7 @@ nav a{
     height: 80%; /* Could be more or less, depending on screen size */
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     align-items: center;
     align-content: center;
     font-family: Bricolage Grotesque;
@@ -577,6 +604,7 @@ nav a{
 }
 
 .pay-box{
+    width: 60%;
     height: 50px;
     margin-top: 8px;
     padding-left: 14px;
@@ -612,16 +640,22 @@ nav a{
 }
 
 .bt-container{
+    width: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 8px;
     margin-bottom: 0px;
     border: 1px solid #dedede;
     border-radius: 8px;
     padding: 14px 8px;
-    
 
+}
+
+.flexer{
+    margin-top: 8px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
 }
 
 .bt-container p{
@@ -656,7 +690,7 @@ nav a{
     height: 80%; /* Could be more or less, depending on screen size */
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     align-items: center;
     align-content: center;
     font-family: Bricolage Grotesque;
@@ -679,10 +713,58 @@ nav a{
 }
 
 .pay-options{
+    width: 60%;
     display: flex;
     flex-direction: row;
 }
 
+
+.modal8 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.5); /* Black w/ 50% opacity */
+    padding-top: 20%; /* Location of the box */
+    backdrop-filter: blur(5px);
+ }
+
+  .modal-content8 {
+    background-color: #fefefe;
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 20px;
+    border-radius: 14px;
+    color: rgb(0, 0, 0);
+    width: 20%;
+    height: 40%; /* Could be more or less, depending on screen size */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Bricolage Grotesque;
+ }
+
+ 
+
+
+ .loader {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid orange; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 
 
   /* Style for the select input when focused */
@@ -795,7 +877,7 @@ nav a{
         width: 80%;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 12px;
         align-items: center;
         align-content: center;
         overflow: hidden;
@@ -805,7 +887,7 @@ nav a{
     
     
     .modal-content1 a{
-        width: 100%;
+        width: 80%;
         text-decoration: none;
         color: #fff;
         font-size: 20px;
@@ -824,9 +906,13 @@ nav a{
         width: 80%;
     }
 
+    .selections p{
+        font-size: 14px;
+    }
+
     .selections img{
-        width: 30px;
-        height: 30px;
+        width: 20px;
+        height: 20px;
     }
 
     .modal-content1 a{
@@ -856,7 +942,7 @@ nav a{
         width: 80%;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
         align-items: center;
         align-content: center;
         font-family: Bricolage Grotesque;
@@ -880,9 +966,72 @@ nav a{
     }
 
     #dee{
-        font-size: 12px;
+        font-size: 10px;
         color: #686868;
         font-weight: lighter;
         text-align: center;
     }
+
+
+    .modal-content8 {
+    background-color: #fefefe;
+    margin: 35% auto; /* 5% from the top and centered */
+    padding: 20px;
+    border-radius: 14px;
+    color: rgb(0, 0, 0);
+    width: 50%;
+    height: 25%; /* Could be more or less, depending on screen size */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Bricolage Grotesque;
+ }
+
+ .modal-content1 h6{
+    font-size: 18px;
+    color: #686868;
+}
+
+ .modal-content8 p{
+    font-size: 12px;
+    color: #7d7d7d;
+ }
+
+ .bt-container{
+    width: 90%;
+}
+
+.pay-box{
+    width: 90%;
+    height: 50px;
+    padding-left: 8px;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    font-family: Bricolage Grotesque;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000;
+    margin: 0px;
+}
+
+.pay-box p{
+    font-size: 9px;
+    color: #7d7d7d;
+}
+
+.copy-btn img{
+    width: 15px;
+    height: 15px;
+}
+
+.flexer{
+    margin-top: 8px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
 }

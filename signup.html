@@ -86,7 +86,7 @@
         <img class="check-icon" src="images/checker.png" alt="" style="display: none;">
       </div>
 
-      <a onclick="closeModal1(), openModal7()" href="#">continue</a>
+      <a onclick="closeModal(), openModal7()" href="#">continue</a>
 
   </div>
 </div>
@@ -95,13 +95,16 @@
 
   <div class="modal-content7">
 
-    <p id="dee" class="cont-subtitle">You are to make a payment of <span id="displayAmount"></span> using
+    <span class="close" onclick="closeModal()">&times;</span>
+
+
+    <p id="dee" class="cont-subtitle">You are to make a payment of using $15
       your selected payment method to the address below. Screenshot
-      and upload the proof of payment
+      and upload the proof of payment for cofirmation
    </p>
   
   
-  <div class="pay-options">
+  <div style="display: none;" class="pay-options">
   
       <img src="images/btc.png" alt="">
       <p>Bitcoin</p>
@@ -110,8 +113,10 @@
   
   
   
+  <div class="flexer">
+    <h6>Bitcoin Address</h6>
+  </div>
   
-  <h6>Bitcoin Address</h6>
 
   <div style="display: none;">
     <input type="file" class="inputFile" id="fileInp" onchange="getFile(event)" accept="image/png, image/jpeg">
@@ -133,8 +138,11 @@
       <p>BTC</p>
   </div>
   
+
+  <div class="flexer">
+    <h6 class="pay-titles">Upload proof of payment</h6>
+  </div>
   
-  <h6 class="pay-titles">Upload proof of payment</h6>
 
   <div id="beet" class="bt-container">
 
@@ -146,10 +154,18 @@
 
 
 
-<a class="pay-btn" > Submit Payment</a></button>
+<a class="pay-btn" onclick="openModal8()" > Submit Payment</a></button>
 
   </div>
 
+</div>
+
+<div id="myModal8" class="modal8">
+  <div class="modal-content8">
+
+    <p>Confirming payment</p>
+    <div class="loader"></div>
+  </div>
 </div>
 
 
@@ -403,6 +419,43 @@
 }
 
 
+</script>
+<script>
+  document.getElementById('copy-img').addEventListener('click', function() {
+      var text = document.getElementById('payment-text').innerText;
+      navigator.clipboard.writeText(text).then(function() {
+          alert('Text copied to clipboard');
+      }, function(err) {
+          alert('Failed to copy text to clipboard');
+      });
+  });
+   </script>
+
+<script>
+  // Get the modal
+  var modal8 = document.getElementById("myModal8");
+
+  modal8.style.display = "none";
+
+  function openModal8() {
+          modal8.style.display = "block";
+          setTimeout(function() {
+              modal8.classList.add("open8");
+          }, ); // Delay added to ensure the display property is applied before adding the 'open' class
+
+          document.body.classList.add('modal-open8');
+      }
+
+      function closeModal8() {
+          modal8.classList.remove("open8");
+          setTimeout(function() {
+              modal8.style.display = "none";
+          }, 50); // Delay added to match the transition duration
+          document.body.classList.remove('modal-open8'); 
+      }
+
+  // Close the modal when the user clicks anywhere outside of it
+ 
 </script>
 </body>
 </html>
