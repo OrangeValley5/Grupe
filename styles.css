@@ -743,12 +743,12 @@ nav a{
     
     .modal-content0 {
         background-color: #ffffff;
-        margin: 35% auto; /* 5% from the top and centered */
+        margin: 15% auto; /* 5% from the top and centered */
         padding: 20px;
         border-radius: 14px;
         color: black;
         width: 80%;
-        height: 50%; /* Could be more or less, depending on screen size */
+        height: 70%; /* Could be more or less, depending on screen size */
         display: flex;
         flex-direction: column;
         gap: 20px;
