@@ -784,17 +784,17 @@ nav a{
     
     .modal-content1 {
         background-color: #ffffff;
-        margin: 35% auto; /* 5% from the top and centered */
+        margin: 10% auto; /* 5% from the top and centered */
         padding: 20px;
         border-radius: 14px;
         color: black;
         width: 80%;
-        height: 60%; /* Could be more or less, depending on screen size */
         display: flex;
         flex-direction: column;
         gap: 20px;
         align-items: center;
         align-content: center;
+        overflow: hidden;
         font-family: Bricolage Grotesque;
         border: 1px solid #ffffff;
     }
@@ -811,6 +811,7 @@ nav a{
         border-radius: 10px;
         text-align: center;
         font-size: 16px;
+        margin-bottom: 20px;
     }
 
     .selections{
@@ -844,12 +845,11 @@ nav a{
     
     .modal-content7 {
         background-color: #ffffff;
-        margin: 35% auto; /* 5% from the top and centered */
+        margin: 10% auto; /* 5% from the top and centered */
         padding: 20px;
         border-radius: 14px;
         color: black;
-        width: 60%;
-        height: 70%; /* Could be more or less, depending on screen size */
+        width: 80%;
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -872,5 +872,11 @@ nav a{
         text-align: center;
         font-size: 16px;
         margin-top: 40px;
+    }
+
+    #dee{
+        font-size: 14px;
+        color: #686868;
+        font-weight: lighter;
     }
 }
