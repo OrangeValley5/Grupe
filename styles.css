@@ -571,7 +571,113 @@ nav a{
     margin-bottom: 20px;
 }
 
+.pay-options img{
+    width: 15px;
+    height: 15px;
+}
 
+.pay-box{
+    height: 50px;
+    margin-bottom: 30px;
+    margin-top: 8px;
+    padding-left: 14px;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    font-family: Bricolage Grotesque;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000;
+}
+
+.pay-box p{
+    font-size: 11px;
+    color: #7d7d7d;
+}
+
+.copy-btn{
+    height: 100%;
+    width: 60px;
+    border: 1px solid #c8c8c8;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copy-btn img{
+    width: 20px;
+    height: 20px;
+}
+
+.bt-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #dedede;
+    border-radius: 8px;
+    padding: 14px 8px;
+    
+
+}
+
+.bt-container p{
+    color: black;
+    font-family: Bricolage Grotesque;
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+
+.modal7 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.5); /* Black w/ 50% opacity */
+    padding-top: 60px; /* Location of the box */
+    backdrop-filter: blur(5px);
+}
+
+.modal-content7 {
+    background-color: #ffffff;
+    margin: 35% auto; /* 5% from the top and centered */
+    padding: 20px;
+    border-radius: 14px;
+    color: black;
+    width: 60%;
+    height: 70%; /* Could be more or less, depending on screen size */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    align-content: center;
+    font-family: Bricolage Grotesque;
+    border: 1px solid #ffffff;
+}
+
+
+.modal-content7 a{
+    width: 60%;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    background-color: #ffa600;
+    padding: 15px 30px;
+    font-weight: 600;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 40px;
+}
 
 
 

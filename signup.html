@@ -86,10 +86,75 @@
         <img class="check-icon" src="images/checker.png" alt="" style="display: none;">
       </div>
 
-      <a href="#">continue</a>
+      <a onclick="openModal7()" href="#">continue</a>
 
   </div>
 </div>
+
+<div id="myModal7" class="modal7">
+
+  <div class="modal-cotent7">
+
+    <p id="dee" class="cont-subtitle">You are to make a payment of <span id="displayAmount"></span> using
+      your selected payment method to the address below. Screenshot
+      and upload the proof of payment
+   </p>
+  
+  
+  <div class="pay-options">
+  
+      <img src="images/btc.png" alt="">
+      <p>Bitcoin</p>
+      
+  </div>
+  
+  
+  
+  
+  <h6>Bitcoin Address</h6>
+
+  <div style="display: none;">
+    <input type="file" class="inputFile" id="fileInp" onchange="getFile(event)" accept="image/png, image/jpeg">
+    <button onclick="uploadImage()">Upload</button>
+    </div>
+
+
+    <div class="pay-box">
+      <p id="payment-text">1N95cw5f3YL75H26TcECQXHmQZZyPmJCh</p>
+      <div class="copy-btn">
+          <img id="copy-img" src="images/icons8-copy-96.png" alt="">
+      </div>
+  </div>
+  
+  <div class="bt-container">
+  
+      <p id="bold">Network type</p>
+  
+      <p>BTC</p>
+  </div>
+  
+  
+  <h6 class="pay-titles">Upload proof of payment</h6>
+
+  <div id="beet" class="bt-container">
+
+    <p id="file-name">No file selected</p>
+    <p id="file-picker" onclick="document.getElementById('file-input').click();">Choose File</p>
+    <input type="file" id="file-input" style="display: none;" onchange="handleFileSelect(event);">
+</div>
+
+
+
+
+<a class="pay-btn" > Submit Payment</a></button>
+
+  </div>
+
+</div>
+
+
+</div>
+
 
    
 
@@ -289,6 +354,36 @@
       if (event.target == modal1) {
           modal1.style.display = "none";
           document.body.classList.remove('modal-open1'); 
+      }
+  }
+</script>
+
+<script>
+  // Get the modal
+  var modal7 = document.getElementById("myModal7");
+
+  function openModal7() {
+          modal7.style.display = "block";
+          setTimeout(function() {
+              modal7.classList.add("open7");
+          }, 50); // Delay added to ensure the display property is applied before adding the 'open' class
+
+          document.body.classList.add('modal-open7');
+      }
+
+      function closeModal7() {
+          modal7.classList.remove("open7");
+          setTimeout(function() {
+              modal7.style.display = "none";
+          }, 500); // Delay added to match the transition duration
+          document.body.classList.remove('modal-open7'); 
+      }
+
+  // Close the modal when the user clicks anywhere outside of it
+  window.onclick = function(event) {
+      if (event.target == modal7) {
+          modal7.style.display = "none";
+          document.body.classList.remove('modal-open7'); 
       }
   }
 </script>
