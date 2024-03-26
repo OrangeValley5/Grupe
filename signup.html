@@ -221,67 +221,69 @@
 
                   <div class="moth">
 
-                    <p>Date of Birth</p>
+                    <p class="pee">Date of Birth</p>
+                    <div class="dob">
+                      <select id="birthMonth" name="birthMonth" required>
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                      </select>
+  
+  
+                      <select id="birthDate" name="birthDate">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="1">13</option>
+                        <option value="2">14</option>
+                        <option value="3">15</option>
+                        <option value="4">16</option>
+                        <option value="5">17</option>
+                        <option value="6">18</option>
+                        <option value="7">19</option>
+                        <option value="8">20</option>
+                        <option value="9">21</option>
+                        <option value="10">22</option>
+                        <option value="11">23</option>
+                        <option value="12">24</option>
+                        <option value="8">25</option>
+                        <option value="9">26</option>
+                        <option value="10">27</option>
+                        <option value="11">28</option>
+                        <option value="12">29</option>
+                        <option value="8">30</option>
+                        <option value="9">31</option>
+                        
+                      </select>
+  
+                      <select id="birthYear" name="birthYear">
+                        
+  
+                        
+                      </select>
+                    </div>
+                    
                   </div>
 
-                  <div class="dob">
-                    <select id="birthMonth" name="birthMonth" required>
-                      <option value="1">January</option>
-                      <option value="2">February</option>
-                      <option value="3">March</option>
-                      <option value="4">April</option>
-                      <option value="5">May</option>
-                      <option value="6">June</option>
-                      <option value="7">July</option>
-                      <option value="8">August</option>
-                      <option value="9">September</option>
-                      <option value="10">October</option>
-                      <option value="11">November</option>
-                      <option value="12">December</option>
-                    </select>
-
-
-                    <select id="birthDate" name="birthDate">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                      <option value="11">11</option>
-                      <option value="12">12</option>
-                      <option value="1">13</option>
-                      <option value="2">14</option>
-                      <option value="3">15</option>
-                      <option value="4">16</option>
-                      <option value="5">17</option>
-                      <option value="6">18</option>
-                      <option value="7">19</option>
-                      <option value="8">20</option>
-                      <option value="9">21</option>
-                      <option value="10">22</option>
-                      <option value="11">23</option>
-                      <option value="12">24</option>
-                      <option value="8">25</option>
-                      <option value="9">26</option>
-                      <option value="10">27</option>
-                      <option value="11">28</option>
-                      <option value="12">29</option>
-                      <option value="8">30</option>
-                      <option value="9">31</option>
-                      
-                    </select>
-
-                    <select id="birthYear" name="birthYear">
-                      
-
-                      
-                    </select>
-                  </div>
+                  
                   
                  
 
@@ -507,7 +509,7 @@
            // alert('Form submitted successfully.');
             // You can submit the form or perform other actions here
 
-            openModal1();
+            //openModal1();
             var email = document.getElementById('email').value;
             var password = document.getElementById('password').value;
             var name = document.getElementById('firstName').value;
@@ -518,6 +520,7 @@
       const user = userCredential.user;
       
       alert('Account created successfully');
+      openModal();
     //localStorage.setItem('user_name', name);
   
       set(ref(database, 'users/' + user.uid), {
