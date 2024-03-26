@@ -1144,5 +1144,11 @@ nav a{
     border: 1px solid #ffffff;
 }
 
+.login-card .input-field {
+    padding-left: 30px;
+    width: 100%;
+    color: white;
+    font-family: Bricolage Grotesque;
+  }
 
 }
