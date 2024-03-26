@@ -16,7 +16,7 @@
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Login</title>
+    <title>Create account</title>
     <script src="./Mail.js"></script>
 
     <script type="text/javascript" src="https://sdk.monnify.com/plugin/monnify.js"></script>
@@ -146,6 +146,7 @@
 
   <div id="beet" class="bt-container">
 
+
     <p id="file-name">No file selected</p>
     <p id="file-picker" onclick="document.getElementById('file-input').click();">Choose File</p>
     <input type="file" id="file-input" style="display: none;" onchange="handleFileSelect(event);">
@@ -195,12 +196,12 @@
         
         <div class="login-card"  data-aos="fade-up">
             <h2>Create Account</h2>
-            <p> Lets get you started with your account</p>
+            <p class="classed"> Lets get you started with your account</p>
             
             <form action="">
               <div class="input-container">
                 <i class="fa-solid fa-envelope icon" ></i>
-                <input id="email" type="email" class="input-field" placeholder="Username">
+                <input id="firstName" type="text" class="input-field" placeholder="Username">
               </div>
 
                 <div class="input-container">
@@ -210,12 +211,17 @@
 
                   <div class="input-container">
                     <i class="fa-solid fa-lock icon"></i>
-                    <input type="password" class="input-field" placeholder="Password">
+                    <input id="password" type="password" class="input-field" placeholder="Password">
                   </div>
 
                   <div class="input-container">
                     <i class="fa-solid fa-lock icon"></i>
                     <input type="password" class="input-field" placeholder="Confirm Password">
+                  </div>
+
+                  <div class="moth">
+
+                    <p>Date of Birth</p>
                   </div>
 
                   <div class="dob">
@@ -279,7 +285,7 @@
                   
                  
 
-                  <a class="flow" href="#">Create Account</a>
+                  <a id="signUp" class="flow" href="#">Create Account</a>
                   <a class="flow2" href="login.html"> Sign In</a></button>
 
                   
@@ -457,5 +463,85 @@
   // Close the modal when the user clicks anywhere outside of it
  
 </script>
+
+<script type="module">
+
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+  import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
+  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
+  
+      
+ 
+  const firebaseConfig = {
+  apiKey: "AIzaSyDNlr_0G_pY2YMJ-764VNYq-MiVkkCLeWQ",
+  authDomain: "mutuals-c7251.firebaseapp.com",
+  projectId: "mutuals-c7251",
+  storageBucket: "mutuals-c7251.appspot.com",
+  messagingSenderId: "603016666612",
+  appId: "1:603016666612:web:3ebbde7c21e7bc5668ada1",
+  measurementId: "G-PYB4D7QG83"
+};
+    
+      //intialize firebase
+      const app = initializeApp(firebaseConfig);
+      
+      const database = getDatabase(app);
+      const auth = getAuth();
+  
+      signUp.addEventListener('click',(e) => {
+
+        validateForm();
+  
+       
+      });
+
+
+      function validateForm() {
+        var firstName = document.getElementById('firstName').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var password = document.getElementById('password').value.trim();
+
+        if (firstName === '' || email === '' || password === '') {
+            alert('Please fill in all fields.');
+        } else {
+           // alert('Form submitted successfully.');
+            // You can submit the form or perform other actions here
+
+            openModal1();
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var name = document.getElementById('firstName').value;
+  
+    createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed up 
+      const user = userCredential.user;
+      
+      alert('Account created successfully');
+    //localStorage.setItem('user_name', name);
+  
+      set(ref(database, 'users/' + user.uid), {
+        name: name,
+        email: email
+      })
+
+      saveNames();
+  
+      window.location.href = 'dasboard.html';
+      // ...
+    })
+    .catch((error) => {
+
+      closeModal1();
+      const errorCode = error.code;
+      const errorMessage = error.message;
+  
+      alert(errorMessage);
+      // ..
+    });
+        }
+    }
+    
+      </script>
 </body>
 </html>
