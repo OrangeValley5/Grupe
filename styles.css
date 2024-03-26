@@ -231,6 +231,54 @@ nav a{
     font-weight: 600;
 }
 
+
+.modal4 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.5); /* Black w/ 50% opacity */
+    padding-top: 60px; /* Location of the box */
+    backdrop-filter: blur(5px);
+}
+
+.modal-content4 {
+    background-color: #ffffff;
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 20px;
+    border-radius: 14px;
+    color: black;
+    width: 40%;
+    height: 60%; /* Could be more or less, depending on screen size */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    font-family: Bricolage Grotesque;
+    border: 1px solid #ffffff;
+}
+
+
+
+
+.modal-content4 a{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.modal-content4 p{
+    font-size: 16px;
+    font-weight: lighter;
+    margin-top: 20px;
+    text-align: center;
+}
+
 .section{
     display: flex;
     width: 100%;
@@ -505,6 +553,16 @@ nav a{
 }
 
 .modal-content7 span{
+    background-color: rgb(255, 236, 199);
+    padding: 3px 13px;
+    font-size: 30px;
+    color: orange;
+    border-radius: 100px;
+    align-self: flex-end;
+}
+
+
+.modal-content4 span{
     background-color: rgb(255, 236, 199);
     padding: 3px 13px;
     font-size: 30px;
@@ -1052,5 +1110,37 @@ nav a{
     display: flex;
     flex-direction: column;
 }
+
+.modal4 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.5); /* Black w/ 50% opacity */
+    padding-top: 60px; /* Location of the box */
+    backdrop-filter: blur(5px);
+}
+
+.modal-content4 {
+    background-color: #ffffff;
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 20px;
+    border-radius: 14px;
+    color: black;
+    width: 80%;
+    height: 70%; /* Could be more or less, depending on screen size */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #7d7d7d;
+    align-content: center;
+    font-family: Bricolage Grotesque;
+    border: 1px solid #ffffff;
+}
+
 
 }
