@@ -122,6 +122,7 @@ nav a{
     font-family: Bricolage Grotesque;
     line-height: 55px;
     font-size: 70px;
+    text-align: center;
   }
 
   .div2{
@@ -146,7 +147,7 @@ nav a{
   .button2{
     width: 100%;
     padding: 15px 100px;
-    color: orange;
+    color: white;
     border: 1px solid #fff;
     text-align: center;
     border-radius: 10px;

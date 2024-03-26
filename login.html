@@ -23,6 +23,43 @@
     
 </head>
 <body>
+
+  <div id="myModal3" class="modal3">
+    <div class="modal-content3">
+        <span class="close" onclick="closeModal3()">&times;</span>
+        
+        <ul>
+            <!-- <li><a href="login.html" class="active2">Sign In</a></li>-->
+            <li><a href="signup.html" class="">Join</a></li>
+            <li><a onclick="openModal4()" href="#" class="">About us</a></li>
+             
+               
+         </ul>
+  
+        <div class="cirx">
+  
+        </div>
+  
+    </div>
+  </div>
+
+  <div id="myModal4" class="modal4">
+    <div class="modal-content4">
+        <span class="close" onclick="closeModal4()">&times;</span>
+        
+       <p>
+        Since its inception in 2023, Mutual Benefits has flourished into the premier social networking app for the LGBTQ+ community, catering to gay, bi, trans, and queer individuals. With millions of daily users spanning across every corner of the globe, our location-based technology serves as a pivotal tool for connecting like-minded individuals worldwide.
+
+As we continue to evolve, Mutual Benefits proudly reflects the modern LGBTQ+ lifestyle and extends its reach onto new platforms. From addressing pertinent social issues to curating original content, we're dedicated to pioneering innovative pathways that deeply resonate within our community.
+
+At Mutual Benefits, we've cultivated a secure environment where you can seamlessly explore, navigate, and connect with the vibrant queer world around you, all within arm's reach.
+
+Keep connecting with Mutual Benefits.
+       </p>
+
+    </div>
+</div>
+  
     <div class="background-image2">
         <div class="overlay2">
   
@@ -31,10 +68,10 @@
         
                 <ul>
                    <!-- <li><a href="login.html" class="active2">Sign In</a></li>-->
-                    <li><a href="" class="active">Our packages</a></li>
+                    <li><a href="signup.html" class="active">Get started</a></li>
                 </ul>
   
-                <div onclick="openModal()" class="menu-toggle">
+                <div onclick="openModal3()" class="menu-toggle">
                     <div  class="hamburger"></div>
                   </div>
             </nav>
@@ -83,5 +120,65 @@
   <script>
     AOS.init();
   </script>
+
+<script>
+  // Get the modal
+  var modal3 = document.getElementById("myModal3");
+
+  function openModal3() {
+          modal3.style.display = "block";
+          setTimeout(function() {
+              modal3.classList.add("open3");
+          }, 50); // Delay added to ensure the display property is applied before adding the 'open' class
+
+          document.body.classList.add('modal-open3');
+      }
+
+      function closeModal3() {
+          modal3.classList.remove("open3");
+          setTimeout(function() {
+              modal3.style.display = "none";
+          }, 500); // Delay added to match the transition duration
+          document.body.classList.remove('modal-open3'); 
+      }
+
+  // Close the modal when the user clicks anywhere outside of it
+  window.onclick = function(event) {
+      if (event.target == modal3) {
+          modal3.style.display = "none";
+          document.body.classList.remove('modal-open3'); 
+      }
+  }
+</script>
+
+<script>
+  // Get the modal
+  var modal4 = document.getElementById("myModal4");
+
+  function openModal4() {
+          modal4.style.display = "block";
+          setTimeout(function() {
+              modal4.classList.add("open4");
+          }, 50); // Delay added to ensure the display property is applied before adding the 'open' class
+
+          document.body.classList.add('modal-open4');
+      }
+
+      function closeModal4() {
+          modal4.classList.remove("open4");
+          setTimeout(function() {
+              modal4.style.display = "none";
+          }, 500); // Delay added to match the transition duration
+          document.body.classList.remove('modal-open4'); 
+      }
+
+  // Close the modal when the user clicks anywhere outside of it
+  window.onclick = function(event) {
+      if (event.target == modal4) {
+          modal4.style.display = "none";
+          document.body.classList.remove('modal-open4'); 
+      }
+  }
+</script>
 </body>
 </html>
