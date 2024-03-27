@@ -215,6 +215,8 @@ nav a{
     align-content: center;
     font-family: Bricolage Grotesque;
     border: 1px solid #ffffff;
+    animation-name: slideIn;
+    animation-duration: 0.5s;
 }
 
 
@@ -231,6 +233,17 @@ nav a{
     font-size: 20px;
     font-weight: 600;
 }
+
+@keyframes slideIn {
+    from {
+      transform: translateY(-50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 
 
 .modal4 {
@@ -261,6 +274,8 @@ nav a{
     align-content: center;
     font-family: Bricolage Grotesque;
     border: 1px solid #ffffff;
+    animation-name: slideIn;
+    animation-duration: 0.5s;
 }
 
 
@@ -516,6 +531,9 @@ nav a{
     align-content: center;
     font-family: Bricolage Grotesque;
     border: 1px solid #ffffff;
+    animation-name: slideIn;
+    animation-duration: 0.5s;
+    
 }
 
 
@@ -650,6 +668,8 @@ nav a{
     align-content: center;
     font-family: Bricolage Grotesque;
     border: 1px solid #ffffff;
+    animation-name: slideIn;
+    animation-duration: 0.5s;
 }
 
 
@@ -777,6 +797,8 @@ nav a{
     align-content: center;
     font-family: Bricolage Grotesque;
     border: 1px solid #ffffff;
+    animation-name: slideIn;
+    animation-duration: 0.5s;
 }
 
 
@@ -828,6 +850,7 @@ nav a{
     align-items: center;
     justify-content: center;
     font-family: Bricolage Grotesque;
+    
  }
 
  
