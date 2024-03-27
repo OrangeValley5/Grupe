@@ -216,7 +216,7 @@ Keep connecting with Mutual Benefits.
       <div class="overlay2">
 
           <nav>
-              <h4 class="logo">MB </h4>
+              <h4 class="logo">Mutual benefits </h4>
       
               <ul>
                  <!-- <li><a href="login.html" class="active2">Sign In</a></li>-->
@@ -249,12 +249,13 @@ Keep connecting with Mutual Benefits.
                   <div class="input-container">
                     <i class="fa-solid fa-lock icon"></i>
                     <input id="password" type="password" class="input-field" placeholder="Password">
+
+                    <span  class="password-toggle" onclick="togglePasswordVisibility()">
+                      <img id="togglePassword" src="images/eyeclosed.png" width="20px" height="20px" alt="">
+                   </span>
                   </div>
 
-                  <div class="input-container">
-                    <i class="fa-solid fa-lock icon"></i>
-                    <input id="deeds" type="password" class="input-field" placeholder="Confirm Password">
-                  </div>
+                
 
                   <div class="moth">
 
@@ -320,11 +321,24 @@ Keep connecting with Mutual Benefits.
                     
                   </div>
 
-                  
+                 
                   
                  
 
-                  <a id="signUp" class="flow" href="#">Create Account</a>
+                  <div class="divers">
+                    <div id="terms-box" style="margin-bottom: 10px;">
+
+                      <P>By ticking you accept our terms and condition </P>
+  
+                      <div class="switch">
+                        <input type="checkbox" id="toggle" class="toggle-input">
+                        <label for="toggle" class="toggle-label"></label>
+                      </div>
+                    </div>
+
+                    <a id="signUp" class="flow" href="#" disabled>Create Account</a>
+
+                  </div>
                   <a class="flow2" href="login.html"> Sign In</a></button>
 
                   <a class="flw2" href="Identity.html">   </a></button>
@@ -644,6 +658,44 @@ Keep connecting with Mutual Benefits.
       if (event.target == modal4) {
           modal4.style.display = "none";
           document.body.classList.remove('modal-open4'); 
+      }
+  }
+</script>
+
+
+<script>
+  const toggleSwitch = document.getElementById('toggle');
+const myButton = document.getElementById('signUp');
+
+toggleSwitch.addEventListener('change', function() {
+  if (this.checked) {
+    myButton.disabled = false;
+    myButton.style.backgroundColor = 'orange'; // Set button background color to grey
+    myButton.style.pointerEvents = 'auto'; // Enable pointer events
+
+
+
+  } else {
+    myButton.disabled = true;
+    myButton.style.backgroundColor = 'grey'; // Set button background color to grey
+    myButton.style.pointerEvents = 'none'; // Enable pointer events
+
+
+  }
+});
+
+</script>
+
+<script>
+    function togglePasswordVisibility() {
+      let passwordInput = document.getElementById("password");
+      const toggleIcon = document.getElementById("togglePassword");
+      if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          toggleIcon.src = "images/eyeopen.png";
+      } else {
+          passwordInput.type = "password";
+          toggleIcon.src = "images/eyeclosed.png";
       }
   }
 </script>

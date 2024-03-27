@@ -88,19 +88,49 @@
            <p>
             Since its inception in 2023, Mutual Benefits has flourished into the premier social networking app for the LGBTQ+ community, catering to gay, bi, trans, and queer individuals. With millions of daily users spanning across every corner of the globe, our location-based technology serves as a pivotal tool for connecting like-minded individuals worldwide.
 
- As we continue to evolve, Mutual Benefits proudly reflects the modern LGBTQ+ lifestyle and extends its reach onto new platforms. From addressing pertinent social issues to curating original content, we're dedicated to pioneering innovative pathways that deeply resonate within our community.
+            As we continue to evolve, Mutual Benefits proudly reflects the modern LGBTQ+ lifestyle and extends its reach onto new platforms. From addressing pertinent social issues to curating original content, we're dedicated to pioneering innovative pathways that deeply resonate within our community.
 
-At Mutual Benefits, we've cultivated a secure environment where you can seamlessly explore, navigate, and connect with the vibrant queer world around you, all within arm's reach.
+            At Mutual Benefits, we've cultivated a secure environment where you can seamlessly explore, navigate, and connect with the vibrant queer world around you, all within arm's reach.
 
-Keep connecting with Mutual Benefits.
+            Keep connecting with Mutual Benefits.
            </p>
 
         </div>
+     </div>
+
+     <div id="cookiesModal" class="cookies-modal">
+        <div class="cookies-content">
+          <h2>Cookies Notice</h2>
+          <p>This website uses cookies to ensure you get the best experience on our website.</p>
+          <div class="buttons">
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="myModal0" class="modal0">
+        <div class="modal-content0">
+            <span class="close" onclick="closeModal()">&times;</span>
+            
+            <h6>Warning</h6>
+            <p>forbidden to under</p>
+    
+            <p class="sub-amount">18</p>
+    
+            <p class="sub-title">This site is reserved for a major and informed public. It offers content to people over the age of 18</p>
+    
+            <a onclick="closeModal0()" href="#">Continue</a>
+    
+            <div class="cirx">
+    
+            </div>
+    
+        </div>
     </div>
+      
 
-
-
-  </div>
+ 
  
 
    
@@ -229,5 +259,62 @@ Keep connecting with Mutual Benefits.
         }
     }
 </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+  const cookiesModal = document.getElementById("cookiesModal");
+  const modal0 = document.getElementById("myModal0");
+
+  cookiesModal.style.display = "block"; // Display the modal when the page loads
+  modal0.style.display = "block";
+
+  const acceptButton = document.getElementById("acceptCookies");
+  const declineButton = document.getElementById("declineCookies");
+
+  acceptButton.addEventListener("click", function() {
+    // Set cookies or perform necessary actions for accepting cookies
+    cookiesModal.style.display = "none"; // Hide the modal after accepting
+  });
+
+  declineButton.addEventListener("click", function() {
+    // Perform necessary actions for declining cookies
+    cookiesModal.style.display = "none"; // Hide the modal after declining
+  });
+});
+
+
+
+</script>
+
+<script>
+    
+   
+    var modal0 = document.getElementById("myModal0");
+  
+    function openModal0() {
+            modal0.style.display = "block";
+            setTimeout(function() {
+                modal0.classList.add("open0");
+            }, 50); // Delay added to ensure the display property is applied before adding the 'open' class
+  
+            document.body.classList.add('modal-open0');
+        }
+  
+        function closeModal0() {
+            modal0.classList.remove("open0");
+            setTimeout(function() {
+                modal0.style.display = "none";
+            }, 500); // Delay added to match the transition duration
+            document.body.classList.remove('modal-open0'); 
+        }
+  
+    // Close the modal when the user clicks anywhere outside of it
+    window.onclick = function(event) {
+        if (event.target == modal0) {
+            modal0.style.display = "none";
+            document.body.classList.remove('modal-open0'); 
+        }
+    }
+  </script>
 </body>
 </html>
