@@ -487,6 +487,8 @@ nav a{
     display: flex;
     flex-direction: column;
     align-items: start;
+    transform: translateY(-30px);
+
   }
 
   .dob{
@@ -1418,7 +1420,7 @@ nav a{
 
     .modal-content8 {
     background-color: #fefefe;
-    margin: 35% auto; /* 5% from the top and centered */
+    margin: 55% auto; /* 5% from the top and centered */
     padding: 20px;
     border-radius: 14px;
     color: rgb(0, 0, 0);
@@ -1513,6 +1515,7 @@ nav a{
     width: 100%;
     color: white;
     font-family: Bricolage Grotesque;
+    font-size: 16px;
   }
 
 
