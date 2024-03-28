@@ -19,8 +19,9 @@
     <title>Login</title>
     <script src="./Mail.js"></script>
 
-    <script type="text/javascript" src="https://sdk.monnify.com/plugin/monnify.js"></script>
     
+        
+
 </head>
 <body>
 
@@ -100,8 +101,14 @@ Keep connecting with Mutual Benefits.
 
     <div class="selections">
       <div>
-        <img src="images/apple.png" alt=""> 
+
+        <div class="sell">
+          <img src="images/apple.png" alt=""> 
         <p>Apple pay</p>
+        </div>
+        
+
+        <p id="coming">Coming soon</p>
       </div>
      
 
@@ -598,8 +605,20 @@ setTimeout(function() {
 
 
 <script>
+ 
+  function toggleCheck(element) {
+  // Hide all check icons
+  var checkIcons = document.querySelectorAll('.check-icon');
+  checkIcons.forEach(function(icon) {
+    icon.style.display = 'none';
+  });
 
-  
+  // Show check icon for the clicked element
+  var checkIcon = element.querySelector('.check-icon');
+  checkIcon.style.display = 'inline-block';
+}
+
+
 </script>
 </body>
 </html>

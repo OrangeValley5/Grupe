@@ -1174,7 +1174,28 @@ nav a{
     color: #777;
     
   }
+
+  .locationOption {
+    cursor: pointer;
+    padding: 5px;
+  }
   
+  .locationOption:hover {
+    background-color: #737373;
+  }
+
+  #locationResults{
+    background-color: #7c7c7c;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: lighter;
+    transform: translateY(-30px);
+  }
+
+  .modal-content0 ul{
+    font-size: 14px;
+    font-weight: lighter;
+  }
   
 
 

@@ -20,11 +20,8 @@
     <script src="./Mail.js"></script>
 
     <script type="text/javascript" src="https://sdk.monnify.com/plugin/monnify.js"></script>
-    <script>
-        
-
-
-    </script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
 
@@ -260,6 +257,14 @@ Keep connecting with Mutual Benefits.
                       <img id="togglePassword" src="images/eyeclosed.png" width="20px" height="20px" alt="">
                    </span>
                   </div>
+
+                  <div class="input-container">
+                    <i class="fa-solid fa-home icon" ></i>
+                    <input id="locationInput"  type="email" class="input-field" placeholder="City">
+                  </div>
+                 <div id="locationResults"></div>
+                 
+                  
 
                 
 
@@ -707,6 +712,46 @@ toggleSwitch.addEventListener('change', function() {
   }
 
   openModal();
+</script>
+
+
+<script>
+  // Replace 'YOUR_MAPBOX_ACCESS_TOKEN' with your actual Mapbox access token
+mapboxgl.accessToken = 'pk.eyJ1Ijoic3dheXkiLCJhIjoiY2x1YmN4YTJ3MGJ5MDJpbnMwM3h5NmFzdyJ9.BEvQbWlqG0H7S3CM2RJlGw';
+
+const input = document.getElementById('locationInput');
+const resultsContainer = document.getElementById('locationResults');
+
+input.addEventListener('input', function() {
+  const inputValue = input.value.trim();
+  if (inputValue.length > 0) {
+    fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${inputValue}.json?access_token=${mapboxgl.accessToken}`)
+      .then(response => response.json())
+      .then(data => {
+        // Clear previous results
+        resultsContainer.innerHTML = '';
+
+        // Display autocomplete results
+        data.features.forEach(location => {
+          const option = document.createElement('div');
+          option.classList.add('locationOption');
+          option.textContent = location.place_name;
+          option.addEventListener('click', function() {
+            input.value = location.place_name;
+            resultsContainer.innerHTML = '';
+          });
+          resultsContainer.appendChild(option);
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching autocomplete results:', error);
+      });
+  } else {
+    // Clear results if input is empty
+    resultsContainer.innerHTML = '';
+  }
+});
+
 </script>
 </body>
 </html>
