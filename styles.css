@@ -125,6 +125,30 @@ nav a{
     text-align: center;
   }
 
+  .background-image3 {
+    position: relative;
+    width: 100%; /* Adjust as needed */
+    height: 1000px; /* Adjust as needed */
+    background-image: url('https://images.unsplash.com/photo-1579650382425-256093056bca?q=80&w=2824&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Replace with your image link */
+    background-size: cover; /* Adjust to cover the div */
+    background-position: center; /* Center the background image */
+  }
+
+  .overlay3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 1.4rem;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity here */
+    backdrop-filter: blur(0px); /* Adjust blur here */
+  }
+
   .div2{
     width: 100%;
     display: flex;
@@ -1102,6 +1126,11 @@ nav a{
     justify-content: space-between;
   }
 
+  .spin{
+    color: orange;
+    text-decoration: none;
+  }
+
 
   /********** COOKIES MODAL **************/
 
@@ -1515,7 +1544,7 @@ nav a{
     width: 100%;
     color: white;
     font-family: Bricolage Grotesque;
-    font-size: 16px;
+    font-size: 15px;
   }
 
 

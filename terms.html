@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" type="images/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Login</title>
+    <script src="./Mail.js"></script>
+
+    
+        
+
+</head>
+<body>
+
+  <div id="myModal3" class="modal3">
+    <div class="modal-content3">
+        <span class="close" onclick="closeModal3()">&times;</span>
+        
+        <ul>
+            <!-- <li><a href="login.html" class="active2">Sign In</a></li>-->
+            <li><a href="signup.html" class="">Join</a></li>
+            <li><a onclick="openModal4()" href="#" class="">About us</a></li>
+             
+               
+         </ul>
+  
+        <div class="cirx">
+  
+        </div>
+  
+    </div>
+  </div>
+
+
+
+
+
+<div id="myModal1" class="modal1">
+<div class="modal-content1">
+    <span class="close" onclick="closeModal1()">&times;</span>
+    
+    <h6>Subscribe</h6>
+
+
+    <p class="sub-title2">Choose your preffered payment method</p>
+
+    <div class="selections">
+      <div>
+        <img src="images/capp.png" alt=""> 
+        <p>Cash app</p>
+      </div>
+     
+
+      <img class="check-icon" src="images/checker.png" alt="" style="display: none;">
+    </div>
+
+    <div class="selections">
+      <div>
+
+        <div class="sell">
+          <img src="images/apple.png" alt=""> 
+        <p>Apple pay</p>
+        </div>
+        
+
+        <p id="coming">Coming soon</p>
+      </div>
+     
+
+      <img class="check-icon" src="images/checker.png" alt="" style="display: none;">
+    </div>
+
+    <div class="selections" onclick="toggleCheck(this)">
+      <div>
+        <img src="images/btc.png" alt="" > 
+      <p>Bitcoin</p>
+      </div>
+      
+
+      <img class="check-icon" src="images/checker.png" alt="" style="display: none;">
+    </div>
+
+    <a onclick="closeModal(), openModal7()" href="#">continue</a>
+
+</div>
+</div>
+
+
+
+
+
+
+  
+    <div class="background-image3">
+        <div class="overlay3">
+  
+            <nav>
+                <h4 class="logo">MB </h4>
+        
+                <ul>
+                   <!-- <li><a href="login.html" class="active2">Sign In</a></li>-->
+                    <li><a href="signup.html" class="active">Get started</a></li>
+                </ul>
+  
+                <div onclick="openModal3()" class="menu-toggle">
+                    <div  class="hamburger"></div>
+                  </div>
+            </nav>
+  
+        
+  
+          
+          <div class="login-card"  data-aos="fade-up">
+              <h2>Privacy Policy</h2>
+              <p style="margin-bottom: 14px;"> 
+                
+                Privacy Policy
+
+This Privacy Policy describes how Mutual Benefit ("we", "us", or "our") collects, uses, and protects the personal information you provide on our website. By using our website, you consent to the data practices described in this policy.
+
+1. Information We Collect
+
+We may collect personal information from you when you register on our website, subscribe to our newsletter, respond to a survey, fill out a form, or otherwise interact with our website. The types of personal information we may collect include:
+
+Name
+Email address
+Date of birth
+Gender identity
+Sexual orientation
+Profile photo
+Location information
+Communication preferences
+2. How We Use Your Information
+
+We may use the personal information we collect from you to:
+
+Provide and personalize our services
+Communicate with you, including responding to your inquiries and sending you updates and notifications
+Improve our website and services
+Conduct research and analysis
+Prevent fraudulent activities and ensure the security of our website
+Comply with legal requirements and enforce our policies
+3. Information Sharing
+
+We do not sell, trade, or rent your personal information to third parties. We may share your information with trusted third parties who assist us in operating our website, conducting our business, or servicing you, as long as those parties agree to keep this information confidential.
+
+4. Cookies and Tracking Technologies
+
+We may use cookies, web beacons, and similar tracking technologies to enhance your experience on our website, analyze trends, administer the website, track users' movements around the site, and gather demographic information about our user base. You can control the use of cookies through your browser settings.
+
+5. Data Security
+
+We take appropriate measures to protect the security of your personal information and maintain its confidentiality. However, no method of transmission over the internet or electronic storage is completely secure, so we cannot guarantee absolute security.
+
+6. Children's Privacy
+
+Our website is not directed to individuals under the age of 18, and we do not knowingly collect personal information from children. If you are under 18, please do not provide any personal information on our website.
+
+7. Your Rights
+
+You have the right to access, update, or delete your personal information. You may also opt-out of receiving promotional communications from us. To exercise these rights, please contact us using the information provided below.
+
+8. Changes to This Policy
+
+We reserve the right to update or modify this Privacy Policy at any time. Any changes will be effective immediately upon posting the updated policy on our website. We encourage you to review this Privacy Policy periodically for changes.
+
+
+
+
+            </p>
+              
+              
+          </div>
+            
+  
+  
+        </div>
+    </div>
+    <script src="./Mail.js"></script>
+    <script src="script.js" defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+<script type="module">
+
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+  import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
+  
+      
+ 
+  const firebaseConfig = {
+  apiKey: "AIzaSyDNlr_0G_pY2YMJ-764VNYq-MiVkkCLeWQ",
+  authDomain: "mutuals-c7251.firebaseapp.com",
+  projectId: "mutuals-c7251",
+  storageBucket: "mutuals-c7251.appspot.com",
+  messagingSenderId: "603016666612",
+  appId: "1:603016666612:web:3ebbde7c21e7bc5668ada1",
+  measurementId: "G-PYB4D7QG83"
+};
+    
+      //intialize firebase
+      const app = initializeApp(firebaseConfig);
+      
+      const database = getDatabase(app);
+      const auth = getAuth();
+  
+      signUp2.addEventListener('click',(e) => {
+
+        //openModal8()
+
+        
+        
+
+  
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+       // Signed in 
+      const user = userCredential.user;
+      
+      closeModal8();
+      openModal();
+       // ...
+   })
+.catch((error) => {
+
+       const errorCode = error.code;
+       const errorMessage = error.message;
+
+       alert(errorMessage);
+   });
+       
+      });
+
+
+      const user = auth.currentUser;
+      onAuthStateChanged(auth, (user) => {
+if (user) {
+  // User is signed in, see docs for a list of available properties
+  // https://firebase.google.com/docs/reference/js/auth.user
+  const uid = user.uid;
+  // ...
+} else {
+  // User is signed out
+  // ...
+}
+});
+
+// Function to call after 5 seconds
+setTimeout(function() {
+    closeModal8(); // Call the function to close the modal
+    // Call another function here
+    // Example: myFunction();
+
+    
+  }, 5000);
+
+  
+    
+      </script>
+
+<script>
+  // Get the modal
+  var modal3 = document.getElementById("myModal3");
+
+  function openModal3() {
+          modal3.style.display = "block";
+          setTimeout(function() {
+              modal3.classList.add("open3");
+          }, 50); // Delay added to ensure the display property is applied before adding the 'open' class
+
+          document.body.classList.add('modal-open3');
+      }
+
+      function closeModal3() {
+          modal3.classList.remove("open3");
+          setTimeout(function() {
+              modal3.style.display = "none";
+          }, 500); // Delay added to match the transition duration
+          document.body.classList.remove('modal-open3'); 
+      }
+
+  // Close the modal when the user clicks anywhere outside of it
+  window.onclick = function(event) {
+      if (event.target == modal3) {
+          modal3.style.display = "none";
+          document.body.classList.remove('modal-open3'); 
+      }
+  }
+</script>
+
+<script>
+  // Get the modal
+  var modal4 = document.getElementById("myModal4");
+
+  function openModal4() {
+          modal4.style.display = "block";
+          setTimeout(function() {
+              modal4.classList.add("open4");
+          }, 50); // Delay added to ensure the display property is applied before adding the 'open' class
+
+          document.body.classList.add('modal-open4');
+      }
+
+      function closeModal4() {
+          modal4.classList.remove("open4");
+          setTimeout(function() {
+              modal4.style.display = "none";
+          }, 500); // Delay added to match the transition duration
+          document.body.classList.remove('modal-open4'); 
+      }
+
+  // Close the modal when the user clicks anywhere outside of it
+  window.onclick = function(event) {
+      if (event.target == modal4) {
+          modal4.style.display = "none";
+          document.body.classList.remove('modal-open4'); 
+      }
+  }
+</script>
+
+<script>
+  // Get the modal
+  var modal3 = document.getElementById("myModal3");
+
+  function openModal3() {
+          modal3.style.display = "block";
+          setTimeout(function() {
+              modal3.classList.add("open3");
+          }, 50); // Delay added to ensure the display property is applied before adding the 'open' class
+
+          document.body.classList.add('modal-open3');
+      }
+
+      function closeModal3() {
+          modal3.classList.remove("open3");
+          setTimeout(function() {
+              modal3.style.display = "none";
+          }, 500); // Delay added to match the transition duration
+          document.body.classList.remove('modal-open3'); 
+      }
+
+  // Close the modal when the user clicks anywhere outside of it
+  window.onclick = function(event) {
+      if (event.target == modal3) {
+          modal3.style.display = "none";
+          document.body.classList.remove('modal-open3'); 
+      }
+  }
+</script>
+
+<script>
+  // Get the modal
+  var modal4 = document.getElementById("myModal4");
+
+  function openModal4() {
+          modal4.style.display = "block";
+          setTimeout(function() {
+              modal4.classList.add("open4");
+          }, 50); // Delay added to ensure the display property is applied before adding the 'open' class
+
+          document.body.classList.add('modal-open4');
+      }
+
+      function closeModal4() {
+          modal4.classList.remove("open4");
+          setTimeout(function() {
+              modal4.style.display = "none";
+          }, 500); // Delay added to match the transition duration
+          document.body.classList.remove('modal-open4'); 
+      }
+
+  // Close the modal when the user clicks anywhere outside of it
+  window.onclick = function(event) {
+      if (event.target == modal4) {
+          modal4.style.display = "none";
+          document.body.classList.remove('modal-open4'); 
+      }
+  }
+</script>
+
+<script>
+  // Get the modal
+  var modal8 = document.getElementById("myModal8");
+
+  modal8.style.display = "none";
+
+  function openModal8() {
+          modal8.style.display = "block";
+          setTimeout(function() {
+              modal8.classList.add("open8");
+          }, ); // Delay added to ensure the display property is applied before adding the 'open' class
+
+          document.body.classList.add('modal-open8');
+      }
+
+      function closeModal8() {
+          modal8.classList.remove("open8");
+          setTimeout(function() {
+              modal8.style.display = "none";
+          }, 50); // Delay added to match the transition duration
+          document.body.classList.remove('modal-open8'); 
+      }
+
+  // Close the modal when the user clicks anywhere outside of it
+ 
+</script>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal0");
+
+  function openModal() {
+          modal.style.display = "block";
+          setTimeout(function() {
+              modal.classList.add("open");
+          }, 50); // Delay added to ensure the display property is applied before adding the 'open' class
+
+          document.body.classList.add('modal-open');
+      }
+
+      function closeModal() {
+          modal.classList.remove("open");
+          setTimeout(function() {
+              modal.style.display = "none";
+          }, 500); // Delay added to match the transition duration
+          document.body.classList.remove('modal-open'); 
+      }
+
+  // Close the modal when the user clicks anywhere outside of it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+          document.body.classList.remove('modal-open'); 
+      }
+  }
+</script>
+
+<script>
+  // Get the modal
+  var modal1 = document.getElementById("myModal1");
+
+  function openModal1() {
+          modal1.style.display = "block";
+          setTimeout(function() {
+              modal1.classList.add("open1");
+          }, 50); // Delay added to ensure the display property is applied before adding the 'open' class
+
+          document.body.classList.add('modal-open1');
+      }
+
+      function closeModal1() {
+          modal1.classList.remove("open1");
+          setTimeout(function() {
+              modal1.style.display = "none";
+          }, 500); // Delay added to match the transition duration
+          document.body.classList.remove('modal-open1'); 
+      }
+
+  // Close the modal when the user clicks anywhere outside of it
+  window.onclick = function(event) {
+      if (event.target == modal1) {
+          modal1.style.display = "none";
+          document.body.classList.remove('modal-open1'); 
+      }
+  }
+</script>
+
+<script>
+  // Get the modal
+  var modal7 = document.getElementById("myModal7");
+
+  function openModal7() {
+          modal7.style.display = "block";
+          setTimeout(function() {
+              modal7.classList.add("open7");
+          }, 50); // Delay added to ensure the display property is applied before adding the 'open' class
+
+          document.body.classList.add('modal-open7');
+      }
+
+      function closeModal7() {
+          modal7.classList.remove("open7");
+          setTimeout(function() {
+              modal7.style.display = "none";
+          }, 500); // Delay added to match the transition duration
+          document.body.classList.remove('modal-open7'); 
+      }
+
+  // Close the modal when the user clicks anywhere outside of it
+  window.onclick = function(event) {
+      if (event.target == modal7) {
+          modal7.style.display = "none";
+          document.body.classList.remove('modal-open7'); 
+      }
+  }
+</script>
+
+<script>
+  document.getElementById('copy-img').addEventListener('click', function() {
+      var text = document.getElementById('payment-text').innerText;
+      navigator.clipboard.writeText(text).then(function() {
+          alert('Text copied to clipboard');
+      }, function(err) {
+          alert('Failed to copy text to clipboard');
+      });
+  });
+   </script>
+
+
+<script>
+ 
+  function toggleCheck(element) {
+  // Hide all check icons
+  var checkIcons = document.querySelectorAll('.check-icon');
+  checkIcons.forEach(function(icon) {
+    icon.style.display = 'none';
+  });
+
+  // Show check icon for the clicked element
+  var checkIcon = element.querySelector('.check-icon');
+  checkIcon.style.display = 'inline-block';
+}
+
+
+</script>
+</body>
+</html>
