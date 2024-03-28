@@ -646,6 +646,7 @@ nav a{
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    width: 100%;
 }
 
 .modal1 {
@@ -1162,11 +1163,34 @@ nav a{
       transform: translateY(0);
     }
   }
+
+  #coming{
+    background-color: rgb(230, 230, 230);
+    font-size: 14px;
+    border-radius: 10px;
+    padding: 2px 8px;
+    width: 40%;
+    text-align: center;
+    color: #777;
+    
+  }
   
   
 
 
 @media screen and (max-width: 768px) {
+
+
+  #coming{
+    background-color: rgb(230, 230, 230);
+    font-size: 10px;
+    border-radius: 10px;
+    padding: 2px 4px;
+    width: 60%;
+    text-align: center;
+    color: #777;
+    
+  }
 
     .menu-toggle{
         display: block;
@@ -1220,12 +1244,12 @@ nav a{
     
     .modal-content0 {
         background-color: #ffffff;
-        margin: 15% auto; /* 5% from the top and centered */
+        margin: 35% auto; /* 5% from the top and centered */
         padding: 20px;
         border-radius: 14px;
         color: black;
         width: 80%;
-        height: 70%; /* Could be more or less, depending on screen size */
+        height: auto; /* Could be more or less, depending on screen size */
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -1265,11 +1289,12 @@ nav a{
     
     .modal-content1 {
         background-color: #ffffff;
-        margin: 10% auto; /* 5% from the top and centered */
+        margin: 35% auto; /* 5% from the top and centered */
         padding: 20px;
         border-radius: 14px;
         color: black;
         width: 80%;
+        height: auto;
         display: flex;
         flex-direction: column;
         gap: 12px;
@@ -1282,7 +1307,7 @@ nav a{
     
     
     .modal-content1 a{
-        width: 80%;
+        width: 90%;
         text-decoration: none;
         color: #fff;
         font-size: 20px;
@@ -1293,12 +1318,13 @@ nav a{
         text-align: center;
         font-size: 16px;
         margin-bottom: 20px;
+        margin-top: 15px;
     }
 
     .selections{
         display: flex;
         flex-direction: row;
-        width: 80%;
+        width: 90%;
     }
 
     .selections p{
@@ -1330,11 +1356,12 @@ nav a{
     
     .modal-content7 {
         background-color: #ffffff;
-        margin: 10% auto; /* 5% from the top and centered */
+        margin: 35% auto; /* 5% from the top and centered */
         padding: 20px;
         border-radius: 14px;
         color: black;
         width: 80%;
+        height: auto;
         display: flex;
         flex-direction: column;
         gap: 15px;
