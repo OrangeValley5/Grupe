@@ -59,6 +59,152 @@ Keep connecting with Mutual Benefits.
 
     </div>
 </div>
+
+<div id="myModal0" class="modal0">
+  <div class="modal-content0">
+      <span class="close" onclick="closeModal()">&times;</span>
+      
+      <h6>Monthly subscription fee</h6>
+
+      <p class="sub-amount">$15</p>
+
+      <p class="sub-title">We charge a monthly subscription fee of $15. You can choose to cancel your subscription at any time</p>
+
+      <a onclick="closeModal(), openModal1()" href="#">Continue</a>
+
+      <div class="cirx">
+
+      </div>
+
+  </div>
+</div>
+
+<div id="myModal1" class="modal1">
+<div class="modal-content1">
+    <span class="close" onclick="closeModal1()">&times;</span>
+    
+    <h6>Subscribe</h6>
+
+
+    <p class="sub-title2">Choose your preffered payment method</p>
+
+    <div class="selections">
+      <div>
+        <img src="images/capp.png" alt=""> 
+        <p>Cash app</p>
+      </div>
+     
+
+      <img class="check-icon" src="images/checker.png" alt="" style="display: none;">
+    </div>
+
+    <div class="selections">
+      <div>
+        <img src="images/apple.png" alt=""> 
+        <p>Apple pay</p>
+      </div>
+     
+
+      <img class="check-icon" src="images/checker.png" alt="" style="display: none;">
+    </div>
+
+    <div class="selections" onclick="toggleCheck(this)">
+      <div>
+        <img src="images/btc.png" alt="" > 
+      <p>Bitcoin</p>
+      </div>
+      
+
+      <img class="check-icon" src="images/checker.png" alt="" style="display: none;">
+    </div>
+
+    <a onclick="closeModal(), openModal7()" href="#">continue</a>
+
+</div>
+</div>
+
+<div id="myModal7" class="modal7">
+
+<div class="modal-content7">
+
+  <span class="close" onclick="closeModal()">&times;</span>
+
+
+  <p id="dee" class="cont-subtitle">You are to make a payment of using $15
+    your selected payment method to the address below. Screenshot
+    and upload the proof of payment for cofirmation
+ </p>
+
+
+<div style="display: none;" class="pay-options">
+
+    <img src="images/btc.png" alt="">
+    <p>Bitcoin</p>
+    
+</div>
+
+
+
+<div class="flexer">
+  <h6>Bitcoin Address</h6>
+</div>
+
+
+<div style="display: none;">
+  <input type="file" class="inputFile" id="fileInp" onchange="getFile(event)" accept="image/png, image/jpeg">
+  <button onclick="uploadImage()">Upload</button>
+  </div>
+
+
+  <div class="pay-box">
+    <p id="payment-text">1N95cw5f3YL75H26TcECQXHmQZZyPmJCh</p>
+    <div class="copy-btn">
+        <img id="copy-img" src="images/icons8-copy-96.png" alt="">
+    </div>
+</div>
+
+<div class="bt-container">
+
+    <p id="bold">Network type</p>
+
+    <p>BTC</p>
+</div>
+
+
+<div class="flexer">
+  <h6 class="pay-titles">Upload proof of payment</h6>
+</div>
+
+
+<div id="beet" class="bt-container">
+
+
+  <p id="file-name">No file selected</p>
+  <p id="file-picker" onclick="document.getElementById('file-input').click();">Choose File</p>
+  <input type="file" id="file-input" style="display: none;" onchange="handleFileSelect(event);">
+</div>
+
+
+
+
+<a class="pay-btn" onclick="openModal8()" > Submit Payment</a></button>
+
+</div>
+
+</div>
+
+<div id="myModal8" class="modal8">
+<div class="modal-content8">
+
+  <p>Confirming payment</p>
+  <div class="loader"></div>
+</div>
+</div>
+
+
+
+
+
   
     <div class="background-image2">
         <div class="overlay2">
@@ -93,7 +239,7 @@ Keep connecting with Mutual Benefits.
   
                     <div class="input-container">
                       <i class="fa-solid fa-lock icon"></i>
-                      <input type="password" class="input-field" placeholder="Password">
+                      <input id="password" type="password" class="input-field" placeholder="Password">
                     </div>
   
 
@@ -102,7 +248,7 @@ Keep connecting with Mutual Benefits.
                     
                    
   
-                    <a class="flow" href="#">Sign in</a>
+                    <a id="signUp2" class="flow" href="#">Sign in</a>
                     <a class="flow2" href="signup.html"> Create Account</a></button>
   
                     
@@ -120,6 +266,87 @@ Keep connecting with Mutual Benefits.
   <script>
     AOS.init();
   </script>
+
+<script type="module">
+
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+  import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
+  
+      
+ 
+  const firebaseConfig = {
+  apiKey: "AIzaSyDNlr_0G_pY2YMJ-764VNYq-MiVkkCLeWQ",
+  authDomain: "mutuals-c7251.firebaseapp.com",
+  projectId: "mutuals-c7251",
+  storageBucket: "mutuals-c7251.appspot.com",
+  messagingSenderId: "603016666612",
+  appId: "1:603016666612:web:3ebbde7c21e7bc5668ada1",
+  measurementId: "G-PYB4D7QG83"
+};
+    
+      //intialize firebase
+      const app = initializeApp(firebaseConfig);
+      
+      const database = getDatabase(app);
+      const auth = getAuth();
+  
+      signUp2.addEventListener('click',(e) => {
+
+        //openModal8()
+
+        
+        
+
+  
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+       // Signed in 
+      const user = userCredential.user;
+      
+      closeModal8();
+      openModal();
+       // ...
+   })
+.catch((error) => {
+
+       const errorCode = error.code;
+       const errorMessage = error.message;
+
+       alert(errorMessage);
+   });
+       
+      });
+
+
+      const user = auth.currentUser;
+      onAuthStateChanged(auth, (user) => {
+if (user) {
+  // User is signed in, see docs for a list of available properties
+  // https://firebase.google.com/docs/reference/js/auth.user
+  const uid = user.uid;
+  // ...
+} else {
+  // User is signed out
+  // ...
+}
+});
+
+// Function to call after 5 seconds
+setTimeout(function() {
+    closeModal8(); // Call the function to close the modal
+    // Call another function here
+    // Example: myFunction();
+
+    
+  }, 5000);
+
+  
+    
+      </script>
 
 <script>
   // Get the modal
@@ -179,6 +406,200 @@ Keep connecting with Mutual Benefits.
           document.body.classList.remove('modal-open4'); 
       }
   }
+</script>
+
+<script>
+  // Get the modal
+  var modal3 = document.getElementById("myModal3");
+
+  function openModal3() {
+          modal3.style.display = "block";
+          setTimeout(function() {
+              modal3.classList.add("open3");
+          }, 50); // Delay added to ensure the display property is applied before adding the 'open' class
+
+          document.body.classList.add('modal-open3');
+      }
+
+      function closeModal3() {
+          modal3.classList.remove("open3");
+          setTimeout(function() {
+              modal3.style.display = "none";
+          }, 500); // Delay added to match the transition duration
+          document.body.classList.remove('modal-open3'); 
+      }
+
+  // Close the modal when the user clicks anywhere outside of it
+  window.onclick = function(event) {
+      if (event.target == modal3) {
+          modal3.style.display = "none";
+          document.body.classList.remove('modal-open3'); 
+      }
+  }
+</script>
+
+<script>
+  // Get the modal
+  var modal4 = document.getElementById("myModal4");
+
+  function openModal4() {
+          modal4.style.display = "block";
+          setTimeout(function() {
+              modal4.classList.add("open4");
+          }, 50); // Delay added to ensure the display property is applied before adding the 'open' class
+
+          document.body.classList.add('modal-open4');
+      }
+
+      function closeModal4() {
+          modal4.classList.remove("open4");
+          setTimeout(function() {
+              modal4.style.display = "none";
+          }, 500); // Delay added to match the transition duration
+          document.body.classList.remove('modal-open4'); 
+      }
+
+  // Close the modal when the user clicks anywhere outside of it
+  window.onclick = function(event) {
+      if (event.target == modal4) {
+          modal4.style.display = "none";
+          document.body.classList.remove('modal-open4'); 
+      }
+  }
+</script>
+
+<script>
+  // Get the modal
+  var modal8 = document.getElementById("myModal8");
+
+  modal8.style.display = "none";
+
+  function openModal8() {
+          modal8.style.display = "block";
+          setTimeout(function() {
+              modal8.classList.add("open8");
+          }, ); // Delay added to ensure the display property is applied before adding the 'open' class
+
+          document.body.classList.add('modal-open8');
+      }
+
+      function closeModal8() {
+          modal8.classList.remove("open8");
+          setTimeout(function() {
+              modal8.style.display = "none";
+          }, 50); // Delay added to match the transition duration
+          document.body.classList.remove('modal-open8'); 
+      }
+
+  // Close the modal when the user clicks anywhere outside of it
+ 
+</script>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal0");
+
+  function openModal() {
+          modal.style.display = "block";
+          setTimeout(function() {
+              modal.classList.add("open");
+          }, 50); // Delay added to ensure the display property is applied before adding the 'open' class
+
+          document.body.classList.add('modal-open');
+      }
+
+      function closeModal() {
+          modal.classList.remove("open");
+          setTimeout(function() {
+              modal.style.display = "none";
+          }, 500); // Delay added to match the transition duration
+          document.body.classList.remove('modal-open'); 
+      }
+
+  // Close the modal when the user clicks anywhere outside of it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+          document.body.classList.remove('modal-open'); 
+      }
+  }
+</script>
+
+<script>
+  // Get the modal
+  var modal1 = document.getElementById("myModal1");
+
+  function openModal1() {
+          modal1.style.display = "block";
+          setTimeout(function() {
+              modal1.classList.add("open1");
+          }, 50); // Delay added to ensure the display property is applied before adding the 'open' class
+
+          document.body.classList.add('modal-open1');
+      }
+
+      function closeModal1() {
+          modal1.classList.remove("open1");
+          setTimeout(function() {
+              modal1.style.display = "none";
+          }, 500); // Delay added to match the transition duration
+          document.body.classList.remove('modal-open1'); 
+      }
+
+  // Close the modal when the user clicks anywhere outside of it
+  window.onclick = function(event) {
+      if (event.target == modal1) {
+          modal1.style.display = "none";
+          document.body.classList.remove('modal-open1'); 
+      }
+  }
+</script>
+
+<script>
+  // Get the modal
+  var modal7 = document.getElementById("myModal7");
+
+  function openModal7() {
+          modal7.style.display = "block";
+          setTimeout(function() {
+              modal7.classList.add("open7");
+          }, 50); // Delay added to ensure the display property is applied before adding the 'open' class
+
+          document.body.classList.add('modal-open7');
+      }
+
+      function closeModal7() {
+          modal7.classList.remove("open7");
+          setTimeout(function() {
+              modal7.style.display = "none";
+          }, 500); // Delay added to match the transition duration
+          document.body.classList.remove('modal-open7'); 
+      }
+
+  // Close the modal when the user clicks anywhere outside of it
+  window.onclick = function(event) {
+      if (event.target == modal7) {
+          modal7.style.display = "none";
+          document.body.classList.remove('modal-open7'); 
+      }
+  }
+</script>
+
+<script>
+  document.getElementById('copy-img').addEventListener('click', function() {
+      var text = document.getElementById('payment-text').innerText;
+      navigator.clipboard.writeText(text).then(function() {
+          alert('Text copied to clipboard');
+      }, function(err) {
+          alert('Failed to copy text to clipboard');
+      });
+  });
+   </script>
+
+
+<script>
+
+  
 </script>
 </body>
 </html>

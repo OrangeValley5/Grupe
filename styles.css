@@ -1117,6 +1117,17 @@ nav a{
   .cookies-content {
     padding: 20px;
     text-align: center;
+    background-color: rgb(233, 152, 0);
+    color: white;
+  }
+
+  .cookies-content h2{
+    font-size: 14px;
+  }
+
+  .cookies-content p{
+    font-size: 14px;
+    font-weight: lighter;
   }
   
   .buttons {
@@ -1129,6 +1140,8 @@ nav a{
     margin: 0 10px;
     border: none;
     cursor: pointer;
+    border-radius: 10px;
+    color: rgb(174, 113, 0);
   }
   
   button:focus {
